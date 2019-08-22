@@ -1,22 +1,14 @@
 # Bem-vindo ao guia de intalação Kubernetes
 
-## Sobre docker
-[Docker](docs/docker.md)
+Estes documentos informa como instalar e configurar um ambiente kubernetes para uso.
 
-## Sobre Kubernetes
-[Sobre](docs/install.md)
+> Autor: **[Celso Nery](https://github.com/celsonery)**
 
-## Preparação do cluster
-[Preparação](docs/install.md)
-
-## Instalação do kubernetes (Debian)
-[Instalação](docs/install.md)
-
-## Iniciando o servidor mestre
-[Iniciando nó mestre ](docs/install.md)
-
-## Adcionando nó escravo ao cluster
-[Integrando um nó escravo ao cluster](docs/install.md)
-
-## Testando o kubernetes
-[Testando](docs/install.md)
+## Sumário
+1. [Docker](docs/docker.md)
+1. [Sobre](docs/install.md)
+1. [Preparação](docs/install.md)
+1. [Instalação](docs/install.md)
+1. [Iniciando nó mestre ](docs/install.md)
+1. [Integrando um nó escravo ao cluster](docs/install.md)
+1. [Testando](docs/install.md)
