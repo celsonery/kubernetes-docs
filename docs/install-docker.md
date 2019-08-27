@@ -1,6 +1,6 @@
 # Instalação docker no Debian 9
 
-- Primeiramente atualize o sistema
+- Atualizar o sistema
 
 > Utilize o "sudo" antes dos comandos caso esteja utilizando como usuário comum.
 ```
@@ -8,13 +8,12 @@
 # apt upgrade
 ```
 
-- Instalação de pacotes necessários para a instalação.
+- Instalar pacotes necessários para a instalação.
 ```
-# apt install build-essential module-assistant curl gnupg2 \
-apt-transport-https software-propoerties-common ca-certificates
+# apt install curl gnupg2 apt-transport-https software-propoerties-common ca-certificates
 ```
 
-- Adicionando repositório do Docker no Debian
+- Adicionar repositório do Docker no Debian
 ```
 # curl -fsSL https://download.docker.com/linux/debian/gpg | apt-key add -
 ```
@@ -25,11 +24,40 @@ apt-transport-https software-propoerties-common ca-certificates
 ```
 deb [arch=amd64] https://download.docker.com/linux/debian stretch stable
 ```
+ou
+```
+add-apt-repository "deb [arch=64] https://download.docker.com/linux/debian stretch stable"
+``` 
 
-- instalando o docker
+- instalar o docker
 > OBS.: A versão atual não funcionou no meu Debian 9 então tive que instalar a versão 18.06.0
 ```
+# apt update
 # apt install docker-ce=18.06.0~ce~3-0~debian
+```
+
+- Configurar o daemon
+> Editar o arquivo **/etc/docker/daemon.js**
+```
+{
+    "exec-opts": ["native.cgroupdriver=systemd"],
+    "log-driver": "json-file",
+    "log-opts": {
+        "max-size": "100m"
+        },
+    "storage-driver": "overlay2"
+}
+```
+
+> Criar o diretorio **/etc/systemd/system/docker.service.d**
+```
+# mkdir -p /etc/systemd/system/docker.service.d
+```
+
+> Reinicie o serviço Docker Daemon
+```
+systemctl daemon-reload
+systemctl restart docker
 ```
 
 > Testando se o docker está funcionando.

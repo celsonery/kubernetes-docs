@@ -27,9 +27,9 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/docs/install-docker.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="611">
-                <caret line="71" lean-forward="true" selection-start-line="71" selection-end-line="71" />
+            <state split_layout="FIRST">
+              <first_editor relative-caret-position="574">
+                <caret line="60" column="3" lean-forward="true" selection-start-line="60" selection-start-column="3" selection-end-line="60" selection-end-column="3" />
               </first_editor>
               <second_editor />
             </state>
@@ -282,9 +282,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/docs/install-docker.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="611">
-            <caret line="71" lean-forward="true" selection-start-line="71" selection-end-line="71" />
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="574">
+            <caret line="60" column="3" lean-forward="true" selection-start-line="60" selection-start-column="3" selection-end-line="60" selection-end-column="3" />
           </first_editor>
           <second_editor />
         </state>
