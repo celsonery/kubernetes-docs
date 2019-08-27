@@ -1,0 +1,1 @@
+# Preparação do ambiente para o kubernetes.
