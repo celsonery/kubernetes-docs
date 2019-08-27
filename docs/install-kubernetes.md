@@ -4,7 +4,7 @@
 
 > Utilize o "sudo" antes dos comandos caso esteja utilizando como usuário comum.
 ```
-curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | apt-key add -
+# curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | apt-key add -
 ```
 
 > Crie o arquivo: **/etc/apt/sources.list.d/kubernetes.list**
@@ -12,6 +12,10 @@ curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | apt-key add -
 
 ```
 deb https://apt.kubernetes.io/ kubernetes-xenial main
+```
+ou
+```
+# echo "deb http://apt.kubernetes.io/ kubernetes-xenial main" | tee /etc/apt/sources.list.d/kubernetes.list
 ```
 
 > Atualize lista de pacotes
@@ -21,11 +25,17 @@ apt update
 
 > Instalação do kubernetes
 ```
-apt install kubelet kubeadm kubectl flannel etcd
+apt install kubelet kubeadm kubectl
 ```
 
 > Marque os pacotes para prevenir modificações.
 ```
 apt-mark hold kubelet kubeadm kubectl
 ```
+
+> Ative o daemon para iniciar automaticamente
+```
+# systemctl enable kubelet
+```
+
 
