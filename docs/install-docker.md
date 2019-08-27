@@ -4,19 +4,19 @@
 
 > Utilize o "sudo" antes dos comandos caso esteja utilizando como usuário comum.
 ```
-apt update
-apt upgrade
+# apt update
+# apt upgrade
 ```
 
 - Instalação de pacotes necessários para a instalação.
 ```
-apt install build-essential module-assistant curl gnupg2 \
+# apt install build-essential module-assistant curl gnupg2 \
 apt-transport-https software-propoerties-common ca-certificates
 ```
 
 - Adicionando repositório do Docker no Debian
 ```
-curl -fsSL https://download.docker.com/linux/debian/gpg | apt-key add -
+# curl -fsSL https://download.docker.com/linux/debian/gpg | apt-key add -
 ```
 
 > Crie o arquivo: **/etc/apt/sources.list.d/docker.list**
@@ -29,12 +29,12 @@ deb [arch=amd64] https://download.docker.com/linux/debian stretch stable
 - instalando o docker
 > OBS.: A versão atual não funcionou no meu Debian 9 então tive que instalar a versão 18.06.0
 ```
-apt install docker-ce=18.06.0~ce~3-0~debian
+# apt install docker-ce=18.06.0~ce~3-0~debian
 ```
 
 > Testando se o docker está funcionando.
 ```
-$docker version
+$ docker version
 ```
 
 > Deve aparecer algo parecido com:

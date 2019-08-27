@@ -1,6 +1,5 @@
 minkube manual
 
-
 Iniciando cluster kubernetes - minikube
 =======================================
 minikube version
