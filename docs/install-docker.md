@@ -59,5 +59,17 @@ Server:
   Experimental:     false
 ```
 
+> Adicionar um usuário comum para execuar um container
+```
+# groupadd docker
+# usermod -aG docker $USER
+```
+
+- Testando o docker
+```
+$ docker run hello-world
+```
+
+
 Mais informações sobre docker acesse: [docker](docker.md)
 Continuar para a instalação do kubernetes [kubernetes instalação](install-kubernetes.md)
