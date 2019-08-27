@@ -1,2 +1,0 @@
-# Guia de instalação kubernetes
-

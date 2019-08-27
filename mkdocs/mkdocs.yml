@@ -1,4 +1,0 @@
-site_name: Kubernetes
-nav:
-  - Home: index.md
-theme: readthedocs
