@@ -164,4 +164,3 @@ kubectl rollout undo deployments/kubernetes-bootcamp
 kubectl get pods
 
 kubectl describe pods
-

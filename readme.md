@@ -12,7 +12,7 @@ Estes documentos informa como instalar e configurar um ambiente kubernetes para 
 1. [Instalação kubernetes](docs/install-kubernetes.md)
 1. [Iniciando nó mestre ](docs/install-docker.md)
 1. [Integrando um nó escravo ao cluster](docs/install-docker.md)
-1. [Testando](docs/install-docker.md)
+1. [Testando e colocando pra funcionar](docs/running.md)
 
 
 
