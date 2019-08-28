@@ -3,11 +3,12 @@
 ### Requisitos
 
 1. Mínimo de 3 servers
+1. Servidor master com 2 CPUS (cores)
 1. Acesso administrativo (Root)
 
 
 ### Preparação
-> Adicionar nomes e IPs das maquinas no arquivo **/etc/hosts**
+Adicionar nomes e IPs das maquinas no arquivo **/etc/hosts**
 
 ```
 10.0.2.100  master.empresa.local    master
@@ -15,7 +16,7 @@
 10.0.2.102  slav02.empresa.local    slav02
 ```
 
-> Configurar o firewall
+Configurar o firewall
 
 Master:
 
@@ -35,27 +36,26 @@ Slaves:
 | 10251 | TCP |
 | 10255 | TCP |
 
-> Desabilitar o SWAP
+Desabilitar o SWAP
 ```
 # swapon -s
 # swapoff -a
 ```
 
-> Editar o arquivo **/etc/fstab** e comentar a linha correspondente
+Editar o arquivo **/etc/fstab** e comentar a linha correspondente
 ```
 #/dev/mapper/master--vg-swap_1 none swap    sw  0   0
 ```
 
-> Após toda configuração verifique se as maquinas estão se enxergando com o **ping**
+Após toda configuração verifique se as maquinas estão se enxergando com o **ping**
 ```
 # ping slav01
 # ping slav02
 ```
 
-> Se tudo correu bem e obteve resposta dos nós escravos e vice-versa reinicie o computador.
+Se tudo correu bem e obteve resposta dos nós escravos e vice-versa reinicie o computador.
 ```
 # shutdown -r now
 ```
-Realizando a instalação do Docker [Instalação do docker](install-docker.md)
+Continuar para a [Instalação do docker](install-docker.md)
 
-Realizando a instalação do Docker [Instalação do Kubernetes](install-kubernetes.md)

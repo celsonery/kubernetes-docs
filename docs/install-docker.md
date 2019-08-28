@@ -2,25 +2,23 @@
 
 - Atualizar o sistema
 
-> Utilize o "sudo" antes dos comandos caso esteja utilizando como usuário comum.
+> Utilize o "sudo" antes dos comandos caso esteja fazendo como usuário comum.
 ```
 # apt update
 # apt upgrade
 ```
 
-- Instalar pacotes necessários para a instalação.
+Instalar pacotes necessários para a instalação.
 ```
 # apt install curl gnupg2 apt-transport-https software-propoerties-common ca-certificates
 ```
 
-- Adicionar repositório do Docker no Debian
+Adicionar repositório do Docker no Debian
 ```
 # curl -fsSL https://download.docker.com/linux/debian/gpg | apt-key add -
 ```
 
-> Crie o arquivo: **/etc/apt/sources.list.d/docker.list**
-> com o seguinte conteúdo:
-
+Crie o arquivo: **/etc/apt/sources.list.d/docker.list**
 ```
 deb [arch=amd64] https://download.docker.com/linux/debian stretch stable
 ```
@@ -29,15 +27,15 @@ ou
 add-apt-repository "deb [arch=64] https://download.docker.com/linux/debian stretch stable"
 ``` 
 
-- instalar o docker
-> OBS.: A versão atual não funcionou no meu Debian 9 então tive que instalar a versão 18.06.0
+instalar o docker
+> A versão atual não funcionou no meu Debian 9 então instalei a versão 18.06.0
 ```
 # apt update
 # apt install docker-ce=18.06.0~ce~3-0~debian
 ```
 
-- Configurar o daemon
-> Editar o arquivo **/etc/docker/daemon.js**
+Configurar o daemon
+Editar o arquivo **/etc/docker/daemon.js**
 ```
 {
     "exec-opts": ["native.cgroupdriver=systemd"],
@@ -49,23 +47,23 @@ add-apt-repository "deb [arch=64] https://download.docker.com/linux/debian stret
 }
 ```
 
-> Criar o diretorio **/etc/systemd/system/docker.service.d**
+Criar o diretorio **/etc/systemd/system/docker.service.d**
 ```
 # mkdir -p /etc/systemd/system/docker.service.d
 ```
 
-> Reinicie o serviço Docker Daemon
+Reinicie o serviço Docker Daemon
 ```
 systemctl daemon-reload
 systemctl restart docker
 ```
 
-> Testando se o docker está funcionando.
+Verifique se o docker está funcionando.
 ```
 $ docker version
 ```
 
-> Deve aparecer algo parecido com:
+Deve aparecer algo parecido com:
 ```
 Client:
  Version:           18.06.0-ce
@@ -87,16 +85,16 @@ Server:
   Experimental:     false
 ```
 
-> Adicionar um usuário comum para execuar um container
+Dar permissão de usuário comum usar containers
 ```
 # groupadd docker
 # usermod -aG docker $USER
 ```
 
-- Testando o docker
+Executando o primeiro docker
 ```
 $ docker run hello-world
 ```
 
 Mais informações sobre docker acesse: [docker](docker.md)
-Continuar para a instalação do kubernetes [kubernetes instalação](install-kubernetes.md)
+Continuar para [kubernetes instalação](install-kubernetes.md)

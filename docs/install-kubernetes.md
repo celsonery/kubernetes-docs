@@ -7,9 +7,7 @@
 # curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | apt-key add -
 ```
 
-> Crie o arquivo: **/etc/apt/sources.list.d/kubernetes.list**
-> com o seguinte conteúdo:
-
+Crie o arquivo: **/etc/apt/sources.list.d/kubernetes.list** com o seguinte conteúdo:
 ```
 deb https://apt.kubernetes.io/ kubernetes-xenial main
 ```
@@ -18,24 +16,24 @@ ou
 # echo "deb http://apt.kubernetes.io/ kubernetes-xenial main" | tee /etc/apt/sources.list.d/kubernetes.list
 ```
 
-> Atualize lista de pacotes
+Atualize a lista de pacotes
 ```
 apt update
 ```
 
-> Instalação do kubernetes
+Instalar o kubernetes
 ```
 apt install kubelet kubeadm kubectl
 ```
 
-> Marque os pacotes para prevenir modificações.
+Marque os pacotes para prevenir modificações.
 ```
 apt-mark hold kubelet kubeadm kubectl
 ```
 
-> Ative o daemon para iniciar automaticamente
+Ative o daemon para iniciar automaticamente
 ```
 # systemctl enable kubelet
 ```
 
-
+Continuar para [Iniciando o cluster Kubernetes Master](initialize_master.md)
