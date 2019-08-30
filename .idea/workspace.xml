@@ -1,16 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="699bd3ea-a261-4336-9027-af503683ba8f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/docs/using.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/install-docker.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/install-docker.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/install-kubernetes.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/install-kubernetes.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/master.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/initialize_master.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/prepare.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/prepare.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/slave.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/initialize_slave.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/readme.md" afterDir="false" />
-    </list>
+    <list default="true" id="699bd3ea-a261-4336-9027-af503683ba8f" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,7 +14,7 @@
         <entry file="file://$PROJECT_DIR$/docs/using.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="659">
+              <first_editor relative-caret-position="1224">
                 <caret line="72" selection-start-line="72" selection-end-line="72" />
               </first_editor>
               <second_editor />
@@ -48,7 +39,7 @@
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="FIRST">
               <first_editor relative-caret-position="170">
-                <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+                <caret line="10" selection-start-line="10" selection-end-line="10" />
               </first_editor>
               <second_editor />
             </state>
@@ -98,6 +89,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -114,7 +106,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -281,6 +272,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/docs/using.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="1224">
+            <caret line="72" selection-start-line="72" selection-end-line="72" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/docs/initialize_slave.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="FIRST">
@@ -291,21 +292,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/docs/using.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="659">
-            <caret line="72" selection-start-line="72" selection-end-line="72" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/docs/commands.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="FIRST">
           <first_editor relative-caret-position="170">
-            <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+            <caret line="10" selection-start-line="10" selection-end-line="10" />
           </first_editor>
           <second_editor />
         </state>
