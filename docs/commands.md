@@ -141,7 +141,7 @@ export NODE_PORT=$(kubectl get services/kubernetes-bootcamp -o go-template='{{(i
 
 echo $NODE_PORT
 
-curl 4(minikube ip):$NODE_PORT
+curl $(minikube ip):$NODE_PORT
 
 kubectl rollout status
 deployments/kubernetes-bootcamp
