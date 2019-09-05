@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="699bd3ea-a261-4336-9027-af503683ba8f" name="Default Changelist" comment="Corrigida comando $(minikube)">
-      <change afterPath="$PROJECT_DIR$/docs/nginx-deployment.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/running.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/running.md" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />

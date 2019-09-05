@@ -55,12 +55,12 @@ kubectl delete deployment npsys-api
 
 - Escalando a aplicação
 
-Criando 3 replicas do container
+Escalando manualmente 3 replicas do container
 ```
 kubectl scale deployment npsys-api --replicas=3
 ```
 
-Criando um autoscalling iniciando em 2 replicas até 15 réplicas escalando quando a CPU atingir 80% de utilização.
+Escalando automaticamente iniciando com 2 replicas até 15 réplicas escalando quando a CPU atingir 80% de utilização.
 ```
 kubectl autoscale deployment npsys-api --min=2 --max=15 --cpu-percent=80
 ```
