@@ -11,12 +11,12 @@ COPY npsys.sh .
 CMD ash npsys.sh
 ```
 
-Gerando a imagem 
+Gerar a imagem 
 ```
 docker image build -t karyon/npsys-api .
 ```
 
-Subindo para o dockerhub
+Subir para o dockerhub
 ```
 docker login
 
@@ -26,29 +26,29 @@ password:
 docker push karyon/npsys-api:latest
 ```
 
-Verificando o que está rodando
+Verificar o que está rodando
 ```
 kubectl get pods -o wide
 kubectl get deployments -o wide
 ```
 
-Criando um container com a imagem criada
+Criar um container com a imagem criada
 ```
 kubectl run npsys-api --image=karyon/npsys-api --image-pull-policy=Never --port=8761
 ```
 
-Criando um serviço para acesso externo a aplicação
+Criar um serviço para acesso externo a aplicação
 ```
 kubectl expose deployment npsys-api --type=LoadBalancer --external-ip=192.168.239.158 --port=8080
 ```
 
-- Derrubando a aplicação
+- Para derrubar a aplicação
 ```
 kubectl delete deployment npsys-api
 ```
 
 
-- Atualizando a aplicação
+- Para atualizar a aplicação
 ```
 
 ```
@@ -65,12 +65,12 @@ Escalando automaticamente iniciando com 2 replicas até 15 réplicas escalando q
 kubectl autoscale deployment npsys-api --min=2 --max=15 --cpu-percent=80
 ```
 
-Verificando autoscale
+Para verificar o autoscale
 ```
 kubectl get hpa
 ```
 
-Removendo autoscale
+Para remover o autoscale
 ```
 kubectl delete hpa npsys-api
 ```
