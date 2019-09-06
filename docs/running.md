@@ -64,3 +64,13 @@ Escalando automaticamente iniciando com 2 replicas até 15 réplicas escalando q
 ```
 kubectl autoscale deployment npsys-api --min=2 --max=15 --cpu-percent=80
 ```
+
+Verificando autoscale
+```
+kubectl get hpa
+```
+
+Removendo autoscale
+```
+kubectl delete hpa npsys-api
+```
