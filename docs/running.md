@@ -26,6 +26,8 @@ password:
 docker push karyon/npsys-api:latest
 ```
 
+[Criar um servidor de respositorio local](server-registry-local.md)
+
 Verificar o que está rodando
 ```
 kubectl get pods -o wide
@@ -47,9 +49,21 @@ kubectl expose deployment npsys-api --type=LoadBalancer --external-ip=192.168.23
 kubectl delete deployment npsys-api
 ```
 
-
 - Para atualizar a aplicação
 ```
+kubectl describe services/kubernetes-bootcamp
+kubectl rollout status
+deployments/kubernetes-bootcamp
+kubectl describe pods
+
+3 - Voltando uma atualizacao
+kubectl set image deployments/kubernetes=bootcamp kubernetes-bootcamp=gcr.io/google-samples/kubernetes-bootcamp:v10
+kubectl get deployments
+kubectl get pods
+kubectl describe pods
+kubectl rollout undo deployments/kubernetes-bootcamp
+kubectl get pods
+kubectl describe pods
 
 ```
 

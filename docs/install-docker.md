@@ -28,9 +28,13 @@ add-apt-repository "deb [arch=64] https://download.docker.com/linux/debian stret
 ``` 
 
 instalar o docker
-> A versão atual não funcionou no meu Debian 9 então instalei a versão 18.06.0
+> Caso tenha problemas ao executar um container instale a versão anteriror [18.06.0]
 ```
 # apt update
+# apt install docker-ce
+
+ou 
+
 # apt install docker-ce=18.06.0~ce~3-0~debian
 ```
 

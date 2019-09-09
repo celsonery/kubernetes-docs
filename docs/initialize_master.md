@@ -50,7 +50,7 @@ kubeadm join 10.0.2.100:6443 --token d1dyaj.31zxywbg93s1ywjy --discovery-token-c
 ```
 > Anote o token e a chave para user nos escravos.
 
-Para executar o cluster
+Para executar o kubernetes
 ```
 mkdir -p $HOME/.kube
 cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
