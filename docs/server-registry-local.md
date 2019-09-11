@@ -13,7 +13,7 @@ Configurações iniciais
 # systemctl restart docker
 ```
 
-- Criar o servidor
+Criar o servidor
 > Para criar um servidor local precisamos criar um container com a imagem registry com o nome que desejarmos.
 
 ```
@@ -27,7 +27,7 @@ registry            <- imagem docker para o servidor
 ```
 
 
-- Tageando uma imagem
+Tageando uma imagem
 > Listando as imagens
 ```
 # docker image ls
@@ -38,12 +38,17 @@ registry            <- imagem docker para o servidor
 # docker tag karyon/npsys-front virtdev01:5000/npsys-front
 ```
 
-- Subindo a imagem
+Subir a imagem
 ```
 # docker push virtdev01:5000/npsys-front
 ```
 
-- Rodando um container kubernetes com a imagem do servidor local
+Rodando um container kubernetes com a imagem do servidor local
 ```
 $ kubectl run npsys-front --image=virtdev01:5000/npsys-front --replicas=3 --port=8761 
+```
+
+Verifique se está rodando
+```
+# kubectl get pods -o wide
 ```
