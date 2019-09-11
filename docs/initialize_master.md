@@ -48,7 +48,7 @@ Then you can join any number of worker nodes by running the following on each as
 kubeadm join 10.0.2.100:6443 --token d1dyaj.31zxywbg93s1ywjy --discovery-token-ca-cert-hash sha256:71a91721595fde66b6382908d801266602a14de8e16bdb7a3cede21509427009
 
 ```
-> Anote o token e a chave para user nos escravos.
+> Anote o token e a chave para usar nos escravos.
 
 Para executar o kubernetes
 ```
