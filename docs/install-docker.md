@@ -1,6 +1,6 @@
 # Instalação docker no Debian 9
 
-- Atualizar o sistema
+Atualizar o sistema
 
 > Utilize o "sudo" antes dos comandos caso esteja fazendo como usuário comum.
 ```
