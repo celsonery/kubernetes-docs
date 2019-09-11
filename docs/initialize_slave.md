@@ -9,7 +9,7 @@ kubeadm join 10.0.2.100:6443 --token 9e0xeu.s0if3... --discovery-token-ca-cert-h
 kubectl get nodes
 ```
 
-A Saída deve ser parecida com essa:
+> A Saída deve ser parecida com essa:
 ![verificadndo nos do cluester](imgs/checando_nos_do_cluster.PNG)
 
 
