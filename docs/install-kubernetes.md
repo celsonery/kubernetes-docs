@@ -1,6 +1,6 @@
 # Instalação kubernetes no Debian 9
 
-- Adicionando repositório do kubernetes
+Adicionando repositório do kubernetes
 
 > Utilize o "sudo" antes dos comandos caso esteja utilizando como usuário comum.
 ```
