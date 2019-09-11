@@ -1,6 +1,6 @@
 ## Colocando para funcionar
 
-Criando imagem Docker local para o container
+#### Criando imagem Docker local para o container
 
 Criar o arquivo **Dockerfile**
 ```
@@ -32,33 +32,35 @@ kubectl get pods -o wide
 kubectl get deployments -o wide
 ```
 
-Criar um container com a imagem criada
+### Criar um container com a imagem criada
 ```
-kubectl run npsys-api --image=karyon/npsys-api --image-pull-policy=Never --port=8761
+kubectl run npsys-api --image=karyon/npsys-api --port=8761
 ```
 
-Criar um serviço para acesso externo a aplicação
+### Criar um serviço para acesso externo a aplicação
 ```
 kubectl expose deployment npsys-api --type=LoadBalancer --external-ip=192.168.239.158 --port=8080
 ```
 
-- Para derrubar a aplicação
+Para derrubar a aplicação
 ```
 kubectl delete deployment npsys-api
 ```
 
-- Para atualizar a aplicação
+### Atualizando e voltando uma versão da aplicação.
+
+Para atualizar a aplicação
 ```
 kubectl set image deployments/npsys-api npsys-api=npsys-api:0.0.2
 ```
 
-- Voltando uma atualizacao
+Voltando uma atualizacao
 ```
 kubectl rollout undo deployments/npsys-api
 
 ```
 
-- Escalando a aplicação
+### Escalando a aplicação
 
 Escalando manualmente 3 replicas do container
 ```
