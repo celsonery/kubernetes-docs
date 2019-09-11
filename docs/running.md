@@ -51,19 +51,12 @@ kubectl delete deployment npsys-api
 
 - Para atualizar a aplicação
 ```
-kubectl describe services/kubernetes-bootcamp
-kubectl rollout status
-deployments/kubernetes-bootcamp
-kubectl describe pods
+kubectl set image deployments/npsys-api npsys-api=npsys-api:0.0.2
+```
 
-3 - Voltando uma atualizacao
-kubectl set image deployments/kubernetes=bootcamp kubernetes-bootcamp=gcr.io/google-samples/kubernetes-bootcamp:v10
-kubectl get deployments
-kubectl get pods
-kubectl describe pods
-kubectl rollout undo deployments/kubernetes-bootcamp
-kubectl get pods
-kubectl describe pods
+- Voltando uma atualizacao
+```
+kubectl rollout undo deployments/npsys-api
 
 ```
 
