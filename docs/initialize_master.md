@@ -1,6 +1,6 @@
 ## Iniciando o nó mestre
 
-- No Master execute **kubeadm ini** para inicializar o cluster pela primeira vez.
+- No Master execute **kubeadm init** para inicializar o cluster pela primeira vez.
 ```
 kubeadm init
 
