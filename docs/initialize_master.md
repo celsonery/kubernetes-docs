@@ -77,6 +77,6 @@ kubectl apply -f "https://cloud.waave.works/k8s/net?k8s-version=$kubever"
 > A saída deve ser igual a essa:
 ![Resposta rede wave](imgs/saida_wave_01.png)
 
-> Após esse procedimento deve estar ok o status do cluster, os **coredns** devem estar em "running"
+> Após esse procedimento os **coredns** devem estar em "running"
 
 Continue para [Inicializando um nó escravo](initialize_slave.md)
