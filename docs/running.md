@@ -1,6 +1,6 @@
 ## Colocando para funcionar
 
-- Criando imagem Docker local para o container
+Criando imagem Docker local para o container
 
 Criar o arquivo **Dockerfile**
 ```
