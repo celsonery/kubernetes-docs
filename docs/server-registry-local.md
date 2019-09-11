@@ -1,6 +1,6 @@
 ## Criando um servidor de repositórios local
 
-- Configurações iniciais
+Configurações iniciais
 > Realizar a configuração no servidor e em todos os nós 
 > OBS.: Configuração somente para teste, usar certificado o conexão TLS para produção
 
