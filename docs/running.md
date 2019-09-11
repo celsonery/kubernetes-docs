@@ -16,7 +16,7 @@ Gerar a imagem
 docker image build -t karyon/npsys-api .
 ```
 
-Subir para o dockerhub
+Subir para o dockerhub ou [Crie um servidor de respositório local](server-registry-local.md)
 ```
 docker login
 
@@ -25,8 +25,6 @@ password:
 
 docker push karyon/npsys-api:latest
 ```
-
-[Criar um servidor de respositorio local](server-registry-local.md)
 
 Verificar o que está rodando
 ```
