@@ -2,7 +2,7 @@
 
 Configurações iniciais
 > Realizar a configuração no servidor e em todos os nós 
-> OBS.: Configuração somente para teste, usar certificado o conexão TLS para produção
+> OBS.: Configuração somente para teste, usar certificado o conexão TLS para produção.
 
 > Acrescentar no arquivo **/etc/docker/daemon.json**
 ```
