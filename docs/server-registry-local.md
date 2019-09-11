@@ -1,4 +1,4 @@
-## Criando um servidor de repositórios locais
+## Criando um servidor de repositórios local
 
 - Configurações iniciais
 > Realizar a configuração no servidor e em todos os nós 
