@@ -39,7 +39,7 @@ ou
 ```
 
 Configurar o daemon
-Editar o arquivo **/etc/docker/daemon.js**
+Editar o arquivo **/etc/docker/daemon.json**
 ```
 {
     "exec-opts": ["native.cgroupdriver=systemd"],
@@ -91,13 +91,16 @@ Server:
 
 Dar permissão de usuário comum usar containers
 ```
-# groupadd docker
 # usermod -aG docker $USER
 ```
 
 Executando o primeiro docker
 ```
 $ docker run hello-world
+
+ou imagem melhor para teste httpd
+
+$ docker run --rm -p 80:80 httpd
 ```
 
 Mais informações sobre docker acesse: [docker](docker.md)

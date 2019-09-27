@@ -6,7 +6,7 @@ kubeadm init
 
 ou
 
-kubeadm init --pod-network-cidr=10.244.0.0/16 --apiserver-advertise-address=10.0.2.100 --kubernetes-version "1.15.1"
+kubeadm init --pod-network-cidr=10.244.0.0/16 --apiserver-advertise-address=10.0.2.100 --kubernetes-version="1.15.1"
 ```
 
 > A Saida do mostra:
