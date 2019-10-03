@@ -10,7 +10,7 @@ Atualizar o sistema
 
 Instalar pacotes necessários para a instalação.
 ```
-# apt install curl gnupg2 apt-transport-https software-propoerties-common ca-certificates
+# apt install curl gnupg2 apt-transport-https software-properties-common ca-certificates
 ```
 
 Adicionar repositório do Docker no Debian
