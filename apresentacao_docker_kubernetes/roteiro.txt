@@ -1,0 +1,73 @@
+Teoria
+- Virtual Machines x Containers
+	- Hypervisors: Vmware, Xen, Hyper-v, VirtualBox, KVM
+
+
+Docker
+- o que e containers e por que usar
+	- diferencas maquina virtual e containers
+	- tipos de containers ( docker, nspawn, 
+	
+	- virtualização SO
+	- imagens
+	- containers
+	
+- instalacao ( linux / windows / Mac )
+- comandos basicos
+	- gerenciando imagens
+	- gerenciando containers
+	
+- Criando imagens
+	- criando com commit
+	- criando com dockerfiles
+	- subindo para o dockerhub
+
+- Armazenamento no docker
+	- criando volumes
+	- anexando volumes ao container
+
+- Rede no docker
+	
+
+- Aplicacao no container
+	- 12factor app
+
+
+
+Kubernetes
+- o que eh introducao
+- preparacao
+	- entendendo ( master, nodes, containers, pods, deployment, services, etcd, registry, 
+	- montagem cluster
+	- preparacao firewall
+	- 
+
+- instalacao
+- iniciação no mestre
+- ingressão no slaves
+
+-- Testando a bagaça
+	- testando com imagens publicas
+	- testando com imagens proprias
+		- imagem no dockerhub
+		
+	- criando servidor de imagem local
+		- subindo imagem para o servidor
+
+	- criando um container com a imagem criada
+	- criando um servico para acesso externo
+	
+- Atualizando a app
+- Voltando a app
+
+- Escalando a app
+	- manualmente
+	- automaticamente
+
+
+	
+
+
+
+Openshift
+
