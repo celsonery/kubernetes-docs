@@ -36,6 +36,10 @@ kubectl get deployments -o wide
 ```
 kubectl run npsys-api --image=karyon/npsys-api --port=8761
 ```
+> OBS: O comando 'run' está **"DEPRECATED"** então use o comando 'create'
+```
+kubectl create deploy npsys-api --image=karyon/npsys-api
+```
 
 ### Criar um serviço para acesso externo a aplicação
 ```

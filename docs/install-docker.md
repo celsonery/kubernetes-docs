@@ -97,10 +97,17 @@ Dar permissão de usuário comum usar containers
 Executando o primeiro docker
 ```
 $ docker run hello-world
+```
 
 ou imagem melhor para teste httpd
 
+```
 $ docker run --rm -p 80:80 httpd
+```
+
+Para verificar se a imagem funcionou basta acessar via browser o ip da maquina host.
+```
+http://127.0.0.1
 ```
 
 Mais informações sobre docker acesse: [docker](docker.md)

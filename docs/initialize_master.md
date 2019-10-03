@@ -6,7 +6,7 @@ kubeadm init
 
 ou
 
-kubeadm init --pod-network-cidr=10.244.0.0/16 --apiserver-advertise-address=10.0.2.100 --kubernetes-version="1.16.2"
+kubeadm init --pod-network-cidr=10.244.0.0/16 --apiserver-advertise-address=10.0.2.100 --kubernetes-version="1.16.0"
 ```
 
 > A Saida do mostra:
@@ -71,7 +71,7 @@ kubectl apply -f https://raw.githubusercontent.com/coreos/flannel/master/Documen
 
 Rede wave:
 export kubever=$(kubectl version | base64 | tr -d '\n')
-kubectl apply -f "https://cloud.waave.works/k8s/net?k8s-version=$kubever"
+kubectl apply -f "https://cloud.weave.works/k8s/net?k8s-version=$kubever"
 ```
 
 > A saída deve ser igual a essa:
