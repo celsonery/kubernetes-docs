@@ -78,6 +78,21 @@ Kubernetes
 	- manualmente
 	- automaticamente
 
+---
+O cluster
+
+Master / Slaves
+Containers / Pods
+Deployments
+Services
+Etcd / Registry
+
+Vantagens:
+Atualização
+Volta
+Escala
+Auto escalando
+---
 
 Minikube
 
