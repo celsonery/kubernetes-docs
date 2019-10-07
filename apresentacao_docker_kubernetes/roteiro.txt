@@ -2,11 +2,25 @@ Teoria
 - Virtual Machines x Containers
 	- Hypervisors: Vmware, Xen, Hyper-v, VirtualBox, KVM
 
+- Diferenças e propósitos
+	- Virtual machines 
+		- Proposito: rodar outro sistema operacional
+		- SO ( Licença / iso )
+		- Hardware ( Memória, processador, Disco )
+		-> Virtualização pesada
+
+	- container 
+		- Proposito: rodar outros servicos e aplicacoes isolada idependendo do SO hospedeiro
+		- Roda como processo do Hospedeiro isolado
+		- Varios containers no mesmo hospedeiro
+		- Tempo de resposta mais agilidade ( Inicializacao / regeneração )
+		- 
+		-> Virtualização compacta e leve
 
 Docker
 - o que e containers e por que usar
 	- diferencas maquina virtual e containers
-	- tipos de containers ( docker, nspawn, 
+	- tipos de containers ( docker, nspawn, rocket )
 	
 	- virtualização SO
 	- imagens
@@ -65,9 +79,7 @@ Kubernetes
 	- automaticamente
 
 
-	
-
-
+Minikube
 
 Openshift
 
