@@ -2,14 +2,118 @@ Apresentacao
 
 Teorica
 
-Apresentacao sobre docker e kubernetes
+Slide 1:
+{
+- Apresentacao sobre docker e kubernetes
+
+Os containers têm facilitado o desenvolvimento ágil e aplicação da metodologia Devops e isso tem aquecido o mercado e soluções poderosas têm sido disponibilizadas. O Google usa containers a mais de 1 década (veja aqui). Mas o assunto nunca foi tão comentado ultimamente, juntamente com o uso do Cloud Computing.
+
+Os containers substituem a virtualização com Hypervisor, então precisamos entender o que cada um oferece para termos certeza que a transição para Docker é uma escolha assertiva.
+
+}
+
+Slide 2:
+{
+- Maquinas virtuais x Containers
+
+- Maquinas virtuais
+O que são máquinas virtuais?
+
+A medida que o poder de processamento foi avançando sobravam recursos. Assim surgiu a idéia das VMs, projetadas para executar em cima do servidor fisicos emulando outros sistemas operacionais.
+
+Hypervisor: Um hypervisor e um software que fica entre o hardware e o SO sendo utilizado para virtualizar o hardware. ( destacamos vmware, virtualbox, hyper-v, xen, kvm/qemu ).
 
 
-- Virtual Machines x Containers
+- Containers
+O que são containers?
 
+Os containers permitem que uma aplicação rode de forma encapsulada em cima de um único sistema operacional hospedeiro, onde o código, bibliotecas e todas as suas dependências são carregadas e executadas de forma independente.
+
+Os containers ficam em cima de um servidor físico e seu sistema operacional hospedeiro.
+Cada container compartilha o kernel do host e geralmente, os binários e bibliotecas também. 
+
+Componentes compartilhados são somente leitura e isso torna os containers excepcionalmente leve. 
+Os containers têm tamanhos estimados em MB e levam segundos para serem iniciados contra os minutos e os varios gigabytes de uma VM inteira.
+
+Containers fornecem o básico necessário para qualquer aplicativo ser executado em um sistema operacional hospedeiro.
+
+Além disso os containers reduzem a carga de trabalho na gestão dos sistemas operacionais, já que eles compartilham o mesmo kernel, você terá menos sistemas em seus servidores para gerenciar pacotes de atualização e segurança.
+
+Existem várias implementações de containers, a mais utilizada e mais conhecida no momento é o Docker. 
+}
+
+Slide 3:
+{
 - Virtual Machines
 
-O que são máquinas virtuais?
+- Objetivo: Virtualizar o hardware - rodar outro so na maquina hospedeira.
+- Necessario: Sistema operacional (.iso) talvez licença.
+- Pode ser rodada varias maquinas virtuais de acordo com o hardware.
+
+- Containers
+
+- Objetivo: Virtualizar o SO - rodar serviços e aplicações.
+- Processos no hospedeiro encapsulado / isolado.
+- Pode ser rodada varios containers controlados no host.
+- Agilidade ( inicialização / regeneração )
+}
+
+Slide 4:
+{
+- Aplicação rodando no metal
+- Aplicação rodando em VM
+- Aplicação rodando em Container
+}
+
+Slide 5:
+{
+Segundo um relatório da DATADOG ( empresa com uma plataforma de monitoramento de infraestrutura de TI em SaaS. mostra em 2015 um aumento de containers em 5x em apenas 1 ano.
+
+Os containers têm facilitado o desenvolvimento ágil e aplicação da metodologia Devops e isso tem aquecido o mercado e soluções poderosas têm sido disponibilizadas. 
+
+O Google usa containers a mais de 1 década. Mas o assunto nunca foi tão comentado juntamente com o uso do Cloud Computing.
+}
+
+Slide 6:
+{
+Os containers permitem adoção híbrida e multicloud
+
+Uma vez conteinerizados, os aplicativos podem ser implantados em qualquer infraestrutura. máquinas virtuais, metal ou nuvens públicas que executam diferentes hipervisores. 
+
+Muitas organizações começam com a execução de containers em sua infraestrutura virtualizada e acham mais fácil migrar para a nuvem sem precisar alterar o código.
+}
+
+Slide 7:
+{
+- Docker
+
+- Imagens: 
+	Uma imagem docker, nada mais é que um template (read-only) que contém todas as informações que o container irá carregar em sua execução como por exemplo o SO.
+	"classe"
+
+- Containes: 
+	São espacos que permitem a execução de aplicações de forma isolada, num mesmo so. as bibliotecas da aplicação e a própria aplicação.
+	"instancia"
+
+- Registries: 
+	São repositórios de imagens que podem ser públicos ou privados.
+
+- Dockerfile: 
+	É um aquivo texto que possui uma série de comandos necessários para criação de uma imagem seguindo uma estrutura pré-definida.
+
+FROM centos:latest
+MAINTAINER Celso Nery
+RUN yum -y install httpd
+CMD ["/usr/sbin/httpd","-D","FOREGROUND"]
+EXPOSE 80
+
+}
+
+=====================================================
+
+
+
+- Maquinas virtuais
 
 Á medida que o poder de processamento e a capacidade dos servidores aumentavam, as aplicações no bare-metal não eram capazes de utilizar a nova abundancia de recursos. Assim as VMs vieram, projetadas executando software em cima de servidores fisicos para emular um sistema de hardware especifico. 
 

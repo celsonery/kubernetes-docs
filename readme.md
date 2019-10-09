@@ -16,8 +16,8 @@ este ambiente não obtive sucesso na versão 10 (buster) do Debian.
 1. [Iniciando nó mestre ](docs/initialize_master.md)
 1. [Integrando um nó escravo ao cluster](docs/initialize_slave.md)
 1. [Testando e colocando pra funcionar](docs/running.md)
-1. [Extras - Ambiente minikube para testes](docs/install-minikube.md)
-1. [Extras - Ambiente frontend simples](docs/install-openshift.md)
+1. [Minikube - Ambiente para testes](docs/install-minikube.md)
+1. [Openshift - Ambiente frontend simples](docs/install-openshift.md)
 
 
 > Consiga todas as informações necessárias em [Docker para desenvolvedores](https://github.com/gomex/docker-para-desenvolvedores)
