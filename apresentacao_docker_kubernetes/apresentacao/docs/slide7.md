@@ -11,10 +11,13 @@
 	"instancia"
 
 - Registries: 
-	São repositórios de imagens que podem ser públicos ou privados.
+	São repositórios de imagens que podem ser públicos ou privados ( dockerhub / local ).
 
 - Dockerfile: 
-	É um aquivo texto que possui uma série de comandos necessários para criação de uma imagem seguindo uma estrutura pré-definida.
+	É um aquivo texto que possui comandos para criação de uma imagem.
+
+	- Está disponível para Windows, Linux, Mac ( mas não se iludam com o Windows pois a interface e linha de comando. "Um linux por debaixo dos panos" ).
+
 
 ```
 FROM centos:latest
