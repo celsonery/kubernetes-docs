@@ -1,0 +1,11 @@
+site_name: Docker / Kubernetes
+theme: readthedocs
+nav:
+  - Home: index.md
+  - Slide 1: slide1.md
+  - Slide 2: slide2.md
+  - Slide 3: slide3.md
+  - Slide 4: slide4.md
+  - Slide 5: slide5.md
+  - Slide 6: slide6.md
+  - Slide 7: slide7.md
