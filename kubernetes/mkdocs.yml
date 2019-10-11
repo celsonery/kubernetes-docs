@@ -1,0 +1,14 @@
+site_name: Mini Guia Kubernetes
+theme: readthedocs
+nav:
+  - Início: index.md
+  - Sobre: sobre.md
+  - Preparação: prepare.md
+  - Instalação docker: install-docker.md
+  - Instalação kubernetes: install-kubernetes.md
+  - Iniciando nó master: initialize-master.md
+  - Integrando um nó escravo ao cluster: initialize-slave.md
+  - Testando e colocando pra funcionar: running.md
+  - Minikube - Ambiente para testes: install-minikube.md
+  - Openshift - Ambiente frontend: install-openshift.md
+  - Licença: LICENSE.md
