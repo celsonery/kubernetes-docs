@@ -2,57 +2,28 @@
 
 ## Como tudo começou
 
-> Os containers têm facilitado o desenvolvimento ágil e aplicação da metodologia Devops e isso tem aquecido o mercado e soluções poderosas têm sido disponibilizadas. O Google usa containers a mais de 1 década. Mas o assunto nunca foi tão comentado ultimamente, juntamente com o uso do Cloud Computing.
-
-> Os containers substituem a virtualização com Hypervisor, então precisamos entender o que cada um oferece para termos certeza que a transição para Docker é uma escolha assertiva.
+A medida que o poder de processamento foi avançando sobravam recursos. Assim surgiu o conceito de **Virtual Machine**, projetadas para executar em cima do servidor fisicos emulando outros sistemas operacionais.
 
 ## Maquinas virtuais
 
-O que são máquinas virtuais?
+O que são máquinas virtuais ou VMs?
 
-Virtualização é a simulação de um hardware/software que roda sobre outro software. Este conceito de ambiente simulado é denominado de máquina virtual (VM - Virtual Machine).
+- **Hypervisor**
 
-A medida que o poder de processamento foi avançando sobravam recursos. Assim surgiu a idéia das VMs, projetadas para executar em cima do servidor fisicos emulando outros sistemas operacionais.
+O hypervisor é o software responsável por ficar entre o hardware / software e o SO sendo utilizado para virtualizar o hardware.
+Existem dois tipos de hypervisor ( tipo 1 e tipo 2 ). 
 
-Hypervisor: Existem dois tipos de hypervisor ( tipo 1 e tipo 2 ). Um hypervisor e um software que fica entre o hardware e o SO sendo utilizado para virtualizar o hardware. ( destacamos vmware, virtualbox, hyper-v, xen, kvm/qemu ).
+Destacamos **VMWARE**, **VIRTUALBOX**, **HYPER-V**, **XEN**, **KVM/QEMU**.
 
 ## Containers
 
-> Os containers têm facilitado o desenvolvimento ágil e aplicação da metodologia Devops e isso tem aquecido o mercado e soluções poderosas têm sido disponibilizadas. O Google usa containers a mais de 1 década. Mas o assunto nunca foi tão comentado ultimamente, juntamente com o uso do Cloud Computing.
-
-> Os containers substituem a virtualização com Hypervisor, então precisamos entender o que cada um oferece para termos certeza que a transição para Docker é uma escolha assertiva.
-
-
----
-
-Apresentacao
-
-Teoria
-
-Slide 1:
-{
-- Apresentacao sobre docker e kubernetes
+E containers o que são?
 
 Os containers têm facilitado o desenvolvimento ágil e aplicação da metodologia Devops e isso tem aquecido o mercado e soluções poderosas têm sido disponibilizadas. O Google usa containers a mais de 1 década. Mas o assunto nunca foi tão comentado ultimamente, juntamente com o uso do Cloud Computing.
 
-Os containers substituem a virtualização com Hypervisor, então precisamos entender o que cada um oferece para termos certeza que a transição para Docker é uma escolha assertiva.
+Os containers substituem a virtualização com Hypervisor, então precisamos entender o que cada um oferece para termos certeza de uma escolha assertiva.
 
-}
-
-Slide 2:
-{
-- Maquinas virtuais x Containers
-
-- Maquinas virtuais
-O que são máquinas virtuais?
-
-A medida que o poder de processamento foi avançando sobravam recursos. Assim surgiu a idéia das VMs, projetadas para executar em cima do servidor fisicos emulando outros sistemas operacionais.
-
-Hypervisor: Existem dois tipos de hypervisor ( tipo 1 e tipo 2 ). Um hypervisor e um software que fica entre o hardware e o SO sendo utilizado para virtualizar o hardware. ( destacamos vmware, virtualbox, hyper-v, xen, kvm/qemu ).
-
-
-- Containers
-O que são containers?
+### O que são containers
 
 Os containers permitem que uma aplicação rode de forma encapsulada em cima de um único sistema operacional hospedeiro, onde o código, bibliotecas e todas as suas dependências são carregadas e executadas de forma independente.
 
@@ -66,43 +37,34 @@ Containers fornecem o básico necessário para qualquer aplicativo ser executado
 
 Além disso os containers reduzem a carga de trabalho na gestão dos sistemas operacionais, já que eles compartilham o mesmo kernel, você terá menos sistemas em seus servidores para gerenciar pacotes de atualização e segurança.
 
-Existem várias implementações de containers, a mais utilizada e mais conhecida no momento é o Docker. 
-}
+Existem várias implementações de containers, sendo a mais utilizada e mais conhecida no momento é o **Docker**.
 
-Slide 3:
-{
-- Virtual Machines
 
-- Objetivo: Virtualizar o hardware - rodar outro so na maquina hospedeira.
-- Necessario: Sistema operacional (.iso) talvez licença.
-- Pode ser rodada varias maquinas virtuais de acordo com o hardware.
+## Principais diferenças
 
-- Containers
+#### Virtual Machines
+
+- Objetivo: Virtualizar o hardware - rodar outro SO sobre a maquina hospedeira.
+- Necessário: Sistema operacional (.iso) talvez licença.
+- Pode ser rodada várias máquinas virtuais de acordo com a capacidade do hardware.
+
+#### Containers
 
 - Objetivo: Virtualizar o SO - rodar serviços e aplicações.
 - Processos no hospedeiro encapsulado / isolado.
-- Pode ser rodada varios containers controlados no host.
+- Pode ser executado vários containers controlados no host.
 - Agilidade ( inicialização / regeneração )
-}
 
-Slide 4:
-{
-- Aplicação rodando no metal
-- Aplicação rodando em VM
-- Aplicação rodando em Container
-}
 
-Slide 5:
-{
+
+---
+
 Segundo um relatório da DATADOG ( empresa com uma plataforma de monitoramento de infraestrutura de TI em SaaS. mostra em 2015 um aumento de containers em 5x em apenas 1 ano.
 
 Os containers têm facilitado o desenvolvimento ágil e aplicação da metodologia Devops e isso tem aquecido o mercado e soluções poderosas têm sido disponibilizadas. 
 
 O Google usa containers a mais de 1 década. Mas o assunto nunca foi tão comentado juntamente com o uso do Cloud Computing.
-}
 
-Slide 6:
-{
 Os containers permitem adoção híbrida e multicloud
 
 Uma vez conteinerizados, os aplicativos podem ser implantados em qualquer infraestrutura. máquinas virtuais, metal ou nuvens públicas que executam diferentes hipervisores. 
@@ -110,8 +72,6 @@ Uma vez conteinerizados, os aplicativos podem ser implantados em qualquer infrae
 Muitas organizações começam com a execução de containers em sua infraestrutura virtualizada e acham mais fácil migrar para a nuvem sem precisar alterar o código.
 }
 
-Slide 7:
-{
 - Docker
 
 - Imagens: 
