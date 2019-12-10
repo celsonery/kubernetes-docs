@@ -2,7 +2,7 @@
 
 ## Como tudo começou
 
-A medida que o poder de processamento foi avançando sobravam recursos. Assim surgiu o conceito de **Virtual Machine**, projetadas para executar em cima do servidor fisicos emulando outros sistemas operacionais.
+A medida que o poder de processamento foi avançando sobravam recursos. Assim surgiu o conceito de **Virtual Machine**, projetadas para executar sobre o servidor físicos emulando outros sistemas operacionais.
 
 ## Maquinas virtuais
 
@@ -19,7 +19,7 @@ Destacamos **VMWARE**, **VIRTUALBOX**, **HYPER-V**, **XEN**, **KVM/QEMU**.
 
 E containers o que são?
 
-Os containers têm facilitado o desenvolvimento ágil e aplicação da metodologia Devops e isso tem aquecido o mercado e soluções poderosas têm sido disponibilizadas. O Google usa containers a mais de 1 década. Mas o assunto nunca foi tão comentado ultimamente, juntamente com o uso do Cloud Computing.
+Os containers têm facilitado o desenvolvimento ágil e aplicação da metodologia Devops e isso tem aquecido o mercado e soluções poderosas têm sido disponibilizadas. O Google usa containers a mais de 1 década. Mas o assunto nunca foi tão comentado ultimamente, acompanhado de uso de Cloud Computing.
 
 Os containers substituem a virtualização com Hypervisor, então precisamos entender o que cada um oferece para termos certeza de uma escolha assertiva.
 
@@ -31,7 +31,7 @@ Os containers ficam em cima de um servidor físico e seu sistema operacional hos
 Cada container compartilha o kernel do host e geralmente, os binários e bibliotecas também. 
 
 Componentes compartilhados são somente leitura e isso torna os containers excepcionalmente leve. 
-Os containers têm tamanhos estimados em MB e levam segundos para serem iniciados contra os minutos e os varios gigabytes de uma VM inteira.
+Os containers têm tamanhos estimados em MB e levam segundos para serem iniciados contra os minutos e os vários gigabytes de uma VM inteira.
 
 Containers fornecem o básico necessário para qualquer aplicativo ser executado em um sistema operacional hospedeiro.
 
@@ -44,13 +44,13 @@ Existem várias implementações de containers, sendo a mais utilizada e mais co
 
 #### Virtual Machines
 
-- Objetivo: Virtualizar o hardware - rodar outro SO sobre a maquina hospedeira.
+- Objetivo: Virtualizar o hardware - executar outro SO sobre a máquina hospedeira.
 - Necessário: Sistema operacional (.iso) talvez licença.
-- Pode ser rodada várias máquinas virtuais de acordo com a capacidade do hardware.
+- Pode ser executada várias máquinas virtuais de acordo com a capacidade do hardware.
 
 #### Containers
 
-- Objetivo: Virtualizar o SO - rodar serviços e aplicações.
+- Objetivo: Virtualizar o SO - executar serviços e aplicações.
 - Processos no hospedeiro encapsulado / isolado.
 - Pode ser executado vários containers controlados no host.
 - Agilidade ( inicialização / regeneração )
