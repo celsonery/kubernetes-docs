@@ -1,6 +1,9 @@
 site_name: Apresentação Docker/Kubernetes
 nav:
-  - Docker Teoria: 01-docker-teoria.md
+  - Virtualização: 01-docker-teoria.md
+  - Virtual Machine: 01-docker-teoria.md
+  - Docker: 01-docker-teoria.md
+  - Kubernetes: 01-docker-teoria.md
 
 theme: readthedocs
 
