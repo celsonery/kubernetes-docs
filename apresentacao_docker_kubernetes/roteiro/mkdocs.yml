@@ -1,1 +1,6 @@
-site_name: My Docs
+site_name: Apresentação Docker/Kubernetes
+nav:
+  - Docker Teoria: 01-docker-teoria.md
+
+theme: readthedocs
+
