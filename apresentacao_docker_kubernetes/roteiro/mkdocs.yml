@@ -1,9 +1,12 @@
 site_name: Apresentação Docker/Kubernetes
 nav:
-  - Virtualização: 01-docker-teoria.md
-  - Virtual Machine: 01-docker-teoria.md
-  - Docker: 01-docker-teoria.md
-  - Kubernetes: 01-docker-teoria.md
+  - Virtualização "O INÍCIO": 01-inicio.md
+  - Virtual Machine: 02-vms.md
+  - Containers: 03-containers.md
+  - Principais diferenças: 04-diferencas.md
+  - Docker: 05-docker.md
+  - Kubernetes: 06-kubernetes.md
+  - Openshift: 07-openshift.md
 
 theme: readthedocs
 
