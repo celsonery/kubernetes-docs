@@ -1,4 +1,5 @@
 site_name: Apresentação Docker/Kubernetes
+theme: readthedocs
 nav:
   - Virtualização "O INÍCIO": 01-inicio.md
   - Virtual Machine: 02-vms.md
@@ -7,5 +8,3 @@ nav:
   - Docker: 05-docker.md
   - Kubernetes: 06-kubernetes.md
   - Openshift: 07-openshift.md
-
-theme: readthedocs
