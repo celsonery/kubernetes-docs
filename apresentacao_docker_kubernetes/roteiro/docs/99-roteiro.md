@@ -1,3 +1,25 @@
+Apresentação
+---
+- Apresentação de Docker
+
+- O Início
+	- Virtualização
+	- Maquina Virtual
+	- Container
+
+- Virtual Machine
+	- O que são VMS
+	- Hypervisor
+		- O que é hypervisor
+		- Tipos de hypervisor (Tipo 1 / Tipo 2)
+
+	
+===
+
+
+Prática
+---
+
 - instalação ( linux / windows / Mac )
 - comandos básicos
 	- gerenciando imagens
@@ -49,16 +71,6 @@
 
 
 Kubernetes
-- o que eh introducao
-- preparacao
-	- entendendo ( master, nodes, containers, pods, deployment, services, etcd, registry, 
-	- montagem cluster
-	- preparação firewall
-	- 
-
-- instalação
-- iniciação no mestre
-- ingressão no slaves
 
 -- Testando a bagaça
 	- testando com imagens publicas
@@ -78,18 +90,3 @@ Kubernetes
 	- manualmente
 	- automaticamente
 
----
-O cluster
-
-Master / Slaves
-Containers / Pods
-Deployments
-Services
-Etcd / Registry
-
-Vantagens:
-Atualização
-Volta
-Escala
-Auto escalando
----
