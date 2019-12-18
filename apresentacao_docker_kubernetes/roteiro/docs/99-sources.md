@@ -1,50 +1,37 @@
-=====================================================
-
-
-
-
-
-
-
-
-
-
-==========================================================
-
-
-Teoria
-- Virtual Machines x Containers
-	- Hypervisors: Vmware, Xen, Hyper-v, VirtualBox, KVM
-
-- Diferenças e propósitos
-	- Virtual machines 
-		- Proposito: rodar outro sistema operacional
-		- SO ( Licença / iso )
-		- Hardware ( Memória, processador, Disco )
-		-> Virtualização pesada
-
-	- container 
-		- Proposito: rodar outros serviços e aplicações isolada independente do SO hospedeiro
-		- Roda como processo do Hospedeiro isolado
-		- Vários containers no mesmo hospedeiro
-		- Tempo de resposta mais agilidade ( Inicializacao / regeneração )
-		- 
-		-> Virtualização compacta e leve
-
-Docker
-- o que e containers e por que usar
-	- diferenças máquina virtual e containers
-	- tipos de containers ( docker, nspawn, rocket )
-	
-	- virtualização SO
-	- imagens
-	- containers
-	
 - instalação ( linux / windows / Mac )
 - comandos básicos
 	- gerenciando imagens
+		- docker image ls / list
+		- docker image inspect <image>
+		- docker image rm <image> / rmi <image>
+
 	- gerenciando containers
-	
+		- docker container ps "Lista os em execução"
+		- docker container ls <param>
+			- a "Lista todos, inclusive os desligados"
+			- l "Lista os ultimos, inclusive os desligados"
+			- n "Lista os N containers, inclusive os desligados"
+			- q "Lista somente os ids"
+		- docker container stop <container>
+		- docker container start <container>
+		- docker container prune "Remove todos os containers"
+		- docker image prune "Remove todas as imagens"
+		- docker volume prune "Remove todos os volumes"
+		- docker ps -f "Mostra containers parados"
+		- docker exec -it <container> bash "Acessar o terminal do container"
+		
+		- docker <container> run <param> <image> <cmd> <args>
+			- d "Execução em background"
+			- i "Modo interativo"
+			- t "Aloca um pseudo TTY"
+			- rm "Remova automaticamente o container ao final"
+			- name "Nomeia o container"
+			- v "Mapeia volume"
+			- p "Mapeia a porta"
+			- m "Limita a memória"
+			- c "Balanceia a CPU"
+
+
 - Criando imagens
 	- criando com commit
 	- criando com dockerfiles
