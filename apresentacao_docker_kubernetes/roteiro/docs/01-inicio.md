@@ -1,6 +1,4 @@
-# Virtualização (O Início)
-
-## Como tudo começou
+# Virtualização - O Início
 
 A medida que o poder de processamento foi avançando sobravam recursos de hardware. Assim surgiu o conceito de **virtualização**.
 
