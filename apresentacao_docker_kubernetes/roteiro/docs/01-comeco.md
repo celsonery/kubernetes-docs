@@ -6,4 +6,4 @@ A **virtualização** é a simulação de um hardware/software que roda sobre ou
 
 Após algum tempo surgiu o conceito de container, que atravéz de funcionalidades do **kernel** do **Linux** foi possível **isolar**, **encapsular** e **gerenciar recursos** em processos do sistema.
 
-A virtualização trouxe uma variedade de benefícios. entre eles estão: redução de custos através da possibilidade de um provisionamento mais rápido, recuperação de desastres melhorada. Ambientes de desenvolvimento também se beneficiaram, onde por exemplo, com um único servidor físico seria possível realizar teste em vários sistemas diferentes e vários serviços distintos. Contando também com a redução física de servidores.
+Basicamente, a virtualização permite que as organizações possam trabalhar com diversas plataformas de software (sistemas operacionais), não havendo necessidade de aumento no número de máquinas físicas. Ou seja, a virtualização permite um alto nível de flexibilidade e portabilidade. Com isso desmitificou-se a ideia de que para um novo serviço de TI a ser implantado em um ambiente era necessário uma máquina física nova.
