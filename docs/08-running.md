@@ -16,7 +16,7 @@ Gerar a imagem
 docker image build -t karyon/npsys-api .
 ```
 
-Subir para o dockerhub ou [Crie um servidor de respositório local](server-registry-local.md)
+Subir para o dockerhub ou [Crie um servidor de respositório local](11-server-registry-local.md)
 ```
 docker login
 
@@ -33,10 +33,6 @@ kubectl get deployments -o wide
 ```
 
 ### Criar um container com a imagem criada
-```
-kubectl run npsys-api --image=karyon/npsys-api --port=8761
-```
-> OBS: O comando 'run' está **"DEPRECATED"** então use o comando 'create'
 ```
 kubectl create deploy npsys-api --image=karyon/npsys-api
 ```
