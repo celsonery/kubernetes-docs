@@ -2,13 +2,14 @@
 
 > Openshift é um projeto que executa o kubernetes por baixo dos panos para facilitar o uso.
 
+![open shift painel](imgs/openshift_painel.png)
+
 Versão funcionando:
 Docker: 19.03.1
 Kubetcl: v1.9.1+a0ce1bc657
 Openshift: v3.9.0+191fece
 
-#### Instalação
-> Necessário docker instalado.
+#### Instalação (Necessário docker instalado).
 
 Download do openshift:
 ```
