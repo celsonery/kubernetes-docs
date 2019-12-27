@@ -20,4 +20,4 @@ A virtualização do tipo completa fornece dois tipos de hypervisor. O tipo 1, c
 
 Destacamos **VMWARE**, **VIRTUALBOX**, **HYPER-V**, **XEN**, **KVM/QEMU**.
 
-## Mostrar VM Rodando.
+## Mostrar uma VM Rodando.
