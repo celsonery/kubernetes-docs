@@ -34,3 +34,24 @@ Normalmente, o Kubernetes é utilizado junto com um serviço de cloud. O Google 
     - Escalonamento
     - Escalonamento automático
 
+## Pratica
+- Instalar docker
+- Instalar kubernetes
+
+- testando com imagens publicas do dockerhub
+- criando um serviço para acesso externo
+
+- criando servidor de imagem local
+- subindo imagem para o servidor
+- testando com imagens próprias
+
+- criando um container com a imagem criada
+- criando um serviço para acesso externo
+
+- Atualizando a imagem criada
+- Atualizando o container com a imagem nova [ on-the-fly ]
+
+- Rollback do container on-the-fly
+
+- Escalonando manualmente
+- Escalonando automaticamente

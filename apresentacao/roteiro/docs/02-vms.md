@@ -19,3 +19,5 @@ Já a paravirtualização entrega para as VMs um hardware igual ao real, com iss
 A virtualização do tipo completa fornece dois tipos de hypervisor. O tipo 1, chamado de bare-metal e o tipo 2, chamado de hosted. O hypervisor do tipo bare-metal interage diretamente com o hardware da máquina física. Ele é completamente independente do sistema operacional do host. Já no tipo hosted, o hypervisor roda sobre o sistema operacional do host, sendo isto possível em qualquer tipo de SO.
 
 Destacamos **VMWARE**, **VIRTUALBOX**, **HYPER-V**, **XEN**, **KVM/QEMU**.
+
+## Mostrar VM Rodando.
