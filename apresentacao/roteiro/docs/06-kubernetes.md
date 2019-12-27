@@ -30,7 +30,7 @@ Normalmente, o Kubernetes é utilizado junto com um serviço de cloud. O Google 
 
 - Vantagens:
     - Atualização
-    - Volta
-    - Escala
-    - Auto escalando
+    - Rollback
+    - Escalonamento
+    - Escalonamento automático
 
