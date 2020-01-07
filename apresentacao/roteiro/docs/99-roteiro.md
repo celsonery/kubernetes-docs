@@ -13,6 +13,20 @@ Apresentação
 		- O que é hypervisor
 		- Tipos de hypervisor (Tipo 1 / Tipo 2)
 
+- Containers
+	- O que são
+	- Tipos ( de Serviços e de Aplicação )
+
+- Breve comparação
+	- 
+
+- Docker
+	- 
+
+- Kubernetes
+	- Minikube
+	- Openshift
+
 	
 ===
 
@@ -89,4 +103,5 @@ Kubernetes
 - Escalando a app
 	- manualmente
 	- automaticamente
+
 

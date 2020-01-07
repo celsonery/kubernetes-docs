@@ -22,7 +22,7 @@ Através de recursos como (Namespaces / chroot / cgroups ) containers isolam pro
 
 - Namespaces no sistema Linux ajuda os processos a terem seu próprio ambiente.
 - Chroot isola os namespaces do resto do sistema e assim protege contra ataques ou interferência de outros containers no mesmo host.
-- Cgroups é um recurso do kernel Linux responsável por isolar a utilização de recursos como CPU, MEMÓRIA, I/O de DISCO e de REDE, a partir de um conjunto de processos.
+- Cgroups é um recurso do kernel Linux responsável por controlar a utilização de recursos como CPU, MEMÓRIA, I/O de DISCO e de REDE.
 
 > Esses 3 ingredientes criam a magia da virtualização dos Containers.
 
@@ -33,8 +33,6 @@ Assim como nos hypervisors os containers também possuem tipos, **CONTAINERS DE 
 ### Dados
 
 Segundo um relatório da DATADOG ( empresa com uma plataforma de monitoramento de infraestrutura de TI em SaaS) mostra em 2015 um aumento de containers em 5x em apenas 1 ano.
-
-O Google usa containers a mais de 1 década. Mas o assunto nunca foi tão comentado acompanhado do uso do Cloud Computing.
 
 Os containers permitem adoção híbrida e multicloud.
 

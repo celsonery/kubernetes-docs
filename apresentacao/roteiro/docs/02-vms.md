@@ -6,18 +6,33 @@ As **VMS** Foram projetadas para emular o hardware para outros sistemas operacio
 
 ## Hypervisor
 
-O Hypervisor é uma camada de software localizada entre o hardware e as máquinas virtuais, responsável por fornecer recursos (storage, CPU, memória, rede, etc.) da máquina física para a máquina virtual. 
+#### Definição
 
-Ele permite que vários sistemas operacionais possam ser executados em um mesmo host.
+Hypervisor ou Virtual Machine Monitor (VMM) é a camada de software que permite a execução concorrente de vários sistemas operacionais em um mesmo computador.
 
-Todo o gerenciamento e alocação de recursos de hardware de uma máquina virtual é feito pelo Hypervisor ou Monitor de Máquina Virtual (VMM – Virtual Machine Monitor). O Hypervisor é uma camada de software localizada entre a camada de hardware e o sistema operacional. É, também, responsável por controlar o acesso do sistema operacional visitante (máquina virtual) aos dispositivos de hardware. Ele também deve prover recursos que garantam a segurança das máquinas virtuais através de mecanismos como isolamento, particionamento e encapsulamento.
+O Hypervisor é responsável pelo controle da execução das máquinas virtuais e também funciona como um mediador entre os dispositivos virtuais e o hardware, como por exemplo transações de I/O. Para isto o VMM tem que ter controle sobre o processador e sobre o resto do hardware.
 
-A virtualização é dividida basicamente em paravirtualização e virtualização completa. Na completa, o hypervisor simula todo o hardware da máquina física, fazendo com que as máquinas virtuais executem de forma isolada. Em outras palavras, o hypervisor emula todo o hardware para as VMs, fazendo com que o sistema operacional execute como se não estivesse em um ambiente virtual. Sua vantagem é a larga aceitação por parte de diversos tipos de sistemas operacionais.
+O Hypervisor apresenta a camada de software hóspede um processador virtual (ou vários) e a permite executar código diretamente sobre ele. Enquanto isso o Hypervisor mantém controle seletivo de recursos do processador real, memória física, gerenciamento de interrupções e I/O.
 
-Já a paravirtualização entrega para as VMs um hardware igual ao real, com isso o sistema a ser virtualizado pode sofrer alterações no decorrer do tempo. Funcionalidade esta que a virtualização completa não permite, já que nela o hardware é entregue de forma virtual. A principal característica da paravirtualização é o desempenho, ou seja, sua facilidade em se adaptar às modificações do sistema operacional devido a sua similaridade com o hardware real.
+Essa camada de software hóspede é um ambiente para a execução de um Sistema Operacional que possui pilhas de execução independentes, ou seja, cada SO é executado isoladamente dos demais SOs concorrentes, e cada um executaria como se o Hypervisor não existisse.
 
-A virtualização do tipo completa fornece dois tipos de hypervisor. O tipo 1, chamado de bare-metal e o tipo 2, chamado de hosted. O hypervisor do tipo bare-metal interage diretamente com o hardware da máquina física. Ele é completamente independente do sistema operacional do host. Já no tipo hosted, o hypervisor roda sobre o sistema operacional do host, sendo isto possível em qualquer tipo de SO.
 
-Destacamos **VMWARE**, **VIRTUALBOX**, **HYPER-V**, **XEN**, **KVM/QEMU**.
+Na literatura classificam os Hypervisors em 2 tipos:
+•Tipo 1, também chamado de nativo ou “bare-metal”.
+•Tipo 2, também chamado de hospedado (hosted em inglês).
+
+TIPO 1: NATIVO
+
+Bare-metal é o termo dado a execução de software diretamente sobre o hardware, sem nenhuma outra camada de software por cima, ou seja, neste tipo o Hypervisor tem controle total sobre o processador e o resto do hardware.
+
+Como exemplos de produtos que utilizam esse tipo de Hypervisor temos o VMware ESXi, o Xen, Microsoft Hyper-V Server e o KVM (Kernel-based Virtual Machine) que são Kernels Linux modificados para trabalhar como Hypervisors.
+
+TIPO 2: HOSPEDADO
+
+Este tipo de Hypervisor é executado como um software sobre um sistema operacional normal chamado de hóspede. Logo, nesta situação o Hypervisor tem controle limitado sobre o hardware.
+
+
+Os produtos que utilizam esse tipo de Hypervisor são os mais populares, pois não requerem que o sistema operacional nativo seja substituído. Exemplos: VMware Player/Fusion/Workstation, Parallels Desktop/Workstation, VirtualBox, VirtualBox OSE, QEMU, oVirt, Microsoft Virtual PC, Virtual Server.
+
 
 ## Mostrar uma VM Rodando.

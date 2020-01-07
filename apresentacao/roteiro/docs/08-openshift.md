@@ -79,3 +79,4 @@ oc version
 ```
 https://192.168.239.175:8443/console
 ```
+# Openshift

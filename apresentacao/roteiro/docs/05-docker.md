@@ -13,6 +13,9 @@
 - Dockerfile: 
 	É um aquivo texto que possui uma série de comandos necessários para criação de uma imagem seguindo uma estrutura pré-definida.
 
+- Dockerhub
+	É o repositório principal das imagens de Dockers.
+	
 #### Dockerfile exemplo
 
 ```
