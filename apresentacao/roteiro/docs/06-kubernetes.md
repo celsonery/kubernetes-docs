@@ -15,7 +15,6 @@ Normalmente, o Kubernetes é utilizado junto com um serviço de cloud. O Google 
 	- entendendo 
         - master
         - nodes
-        - containers
         - pods
         - deployment
         - services
