@@ -57,5 +57,5 @@ Se tudo correu bem e obteve resposta dos nós escravos e vice-versa reinicie o c
 ```
 # shutdown -r now
 ```
-Continuar para a [Instalação do docker](install-docker.md)
+Continuar para a [Instalação do docker](04-install-docker.md)
 

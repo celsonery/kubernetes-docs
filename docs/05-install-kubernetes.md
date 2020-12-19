@@ -36,4 +36,4 @@ Ative o daemon para iniciar automaticamente
 # systemctl enable kubelet
 ```
 
-Continuar para [Iniciando o cluster Kubernetes Master](initialize_master.md)
+Continuar para [Iniciando o cluster Kubernetes Master](06-initialize-master.md)

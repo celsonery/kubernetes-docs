@@ -110,5 +110,5 @@ Para verificar se a imagem funcionou basta acessar via browser o ip da maquina h
 http://127.0.0.1
 ```
 
-Mais informações sobre docker acesse: [docker](docker.md)
-Continuar para [kubernetes instalação](install-kubernetes.md)
+Mais informações sobre docker acesse: [docker](01-docker.md)
+Continuar para [kubernetes instalação](05-install-kubernetes.md)

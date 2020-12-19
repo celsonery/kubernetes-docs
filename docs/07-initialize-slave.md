@@ -15,4 +15,4 @@ kubectl get nodes
 
 > Utilize o token e a chave que recebeu ao iniciar o nó mestre.
 
-Continue para [Usando o cluster](running.md)
+Continue para [Usando o cluster](08-running.md)

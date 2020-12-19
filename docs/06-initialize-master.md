@@ -79,4 +79,4 @@ kubectl apply -f "https://cloud.weave.works/k8s/net?k8s-version=$kubever"
 
 > Após esse procedimento os **coredns** devem estar em "running"
 
-Continue para [Inicializando um nó escravo](initialize_slave.md)
+Continue para [Inicializando um nó escravo](07-initialize-slave.md)
