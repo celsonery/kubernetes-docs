@@ -4,7 +4,7 @@
 
 1. Mínimo de 3 servers
 1. Servidor master com 2 CPU's (cores)
-1. Acesso administrativo (Root)
+1. Acesso administrativo (root)
 
 
 ### Preparação

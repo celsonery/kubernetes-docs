@@ -18,6 +18,9 @@ este ambiente não obtive sucesso na versão 10 (buster) do Debian.
 1. [Testando e colocando pra funcionar](08-running.md)
 1. [Minikube - Ambiente para testes](09-install-minikube.md)
 1. [Openshift - Ambiente frontend simples](10-install-openshift.md)
+1. Guia rápido:
+    - [Guia rapido 'kubernete'](commands.md)
+    - [Guia rapido 'Criando conteiner'](using.md)
 1. [LICENSE](LICENSE.md)
 
 > Consiga todas as informações necessárias em [Docker para desenvolvedores](https://github.com/gomex/docker-para-desenvolvedores)

@@ -1,4 +1,4 @@
-# Instalação docker no Debian 9
+# Instalação docker no Debian 9 / 10
 
 Atualizar o sistema
 
@@ -19,13 +19,16 @@ Adicionar repositório do Docker no Debian
 ```
 
 Crie o arquivo: **/etc/apt/sources.list.d/docker.list**
+
+Debian 9
 ```
 deb [arch=amd64] https://download.docker.com/linux/debian stretch stable
 ```
-ou
+
+Debian 10
 ```
-add-apt-repository "deb [arch=64] https://download.docker.com/linux/debian stretch stable"
-``` 
+deb [arch=amd64] https://download.docker.com/linux/debian buster stable
+```
 
 instalar o docker
 > Caso tenha problemas ao executar um container instale a versão anteriror [18.06.0]
