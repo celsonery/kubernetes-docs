@@ -1,4 +1,4 @@
-# Bem-vindo ao guia de intalação Kubernetes
+# Bem-vindo ao guia básico de contrução de cluster de Kubernetes
 
 Estes documentos informa como instalar e configurar um ambiente kubernetes para uso.
 
