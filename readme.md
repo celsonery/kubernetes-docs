@@ -1,8 +1,8 @@
 # Guia básico Kubernetes
 
-Estes documentos informa como instalar e configurar um ambiente kubernetes para uso.
+Estes documentos informa como instalar e configurar um ambiente kubernetes para testes.
 
-> Todo ambiente foi construido em cima da distribuição Debian 9 (stretch) e 10 (buster) do Debian.
+> Todo ambiente foi construido em Debian 9 (stretch) e 10 (buster).
 
 > Autor: **[Celso Nery](https://github.com/celsonery)**
 
@@ -19,7 +19,7 @@ Estes documentos informa como instalar e configurar um ambiente kubernetes para 
 1. [Openshift - Ambiente frontend simples](docs/10-install-openshift.md)
 
 
-> Consiga todas as informações necessárias em [Docker para desenvolvedores](https://github.com/gomex/docker-para-desenvolvedores)
+> Obtenha todas as informações necessárias em [Docker para desenvolvedores](https://github.com/gomex/docker-para-desenvolvedores)
 ou na própria documentação oficial [Docker.com](https://www.docker.com/)
 
 Kubernetes
