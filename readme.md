@@ -1,6 +1,6 @@
 # Guia básico Kubernetes
 
-Estes documentos informa como instalar e configurar um ambiente kubernetes para testes.
+Estes documentos informam como instalar e configurar um ambiente kubernetes para testes.
 
 > Todo ambiente foi construido em Debian 9 (stretch) e 10 (buster).
 
