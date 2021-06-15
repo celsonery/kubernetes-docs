@@ -6,7 +6,7 @@ kubeadm init
 
 ou
 
-kubeadm init --pod-network-cidr=10.244.0.0/16 --apiserver-advertise-address=10.0.10.100 --kubernetes-version="1.16.0"
+kubeadm init --pod-network-cidr=10.244.0.0/16 --apiserver-advertise-address=10.0.10.100 --kubernetes-version="1.21.1"
 ```
 
 > A Saida será algo como:
@@ -64,9 +64,10 @@ kubectl get pods --all-namespaces
 > A Saida deve estar assim:
 ![All namespaces em pending](imgs/saida_all_namespaces01.png)
 
-Crie uma rede virtual ( namely, calico, canal, flannel, wave )
+Crie uma rede virtual ( namely, calico, canal, flannel, weave )
+
+Exemplo rede weave:
 ```
-Rede wave:
 export kubever=$(kubectl version | base64 | tr -d '\n')
 kubectl apply -f "https://cloud.weave.works/k8s/net?k8s-version=$kubever"
 ```
@@ -74,6 +75,6 @@ kubectl apply -f "https://cloud.weave.works/k8s/net?k8s-version=$kubever"
 > A saída deve ser igual a essa:
 ![Resposta rede wave](imgs/saida_wave_01.png)
 
-> Após esse procedimento os **coredns** devem estar em "running"
+> Após esse procedimento os **coredns** devem estar "running"
 
 Continue para [Inicializando um nó escravo](07-initialize-slave.md)
