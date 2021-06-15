@@ -1,6 +1,6 @@
-# Instalação kubernetes no Debian 9
+# Instalação kubernetes no Debian
 
-Adicionando repositório do kubernetes
+Adicione o repositório do kubernetes
 
 > Utilize o "sudo" antes dos comandos caso esteja utilizando como usuário comum.
 ```
@@ -21,9 +21,14 @@ Atualize a lista de pacotes
 apt update
 ```
 
-Instalar o kubernetes
+Instale o kubernetes no master (control-plane)
 ```
 apt install kubelet kubeadm kubectl
+```
+
+Nos nós escravos (workers) instale somente o kubelet
+```
+apt install kubelet
 ```
 
 Marque os pacotes para prevenir modificações.
@@ -36,4 +41,4 @@ Ative o daemon para iniciar automaticamente
 # systemctl enable kubelet
 ```
 
-Continuar para [Iniciando o cluster Kubernetes Master](06-initialize-master.md)
+Continue para [Iniciando o cluster Kubernetes Master](06-initialize-master.md)

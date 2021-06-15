@@ -1,12 +1,12 @@
 # Criando primeiro container
 
-Criar diretório para o container
+Crie o diretório para o container
 ```
 mkdir nginx
 cd nginx
 ```
 
-Criar o arquivo do container **nginx-deployment**
+Crie o arquivo do container **nginx-deployment**
 ```
 apiVersion: apps/v1
 kind: Deployment
@@ -42,7 +42,7 @@ kubectl get deployments
 kubectl describe deployment nginx-deployment
 ```
 
-Agora criar o serviço para o container no arquivo **nginx-service.yaml**
+Agora crie o serviço para o container no arquivo **nginx-service.yaml**
 ```
 apiVersion: v1
 kind: Service
@@ -69,4 +69,3 @@ Verficando o serviço
 kubectl get service
 kubectl describe service nginx-service
 ```
-

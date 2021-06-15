@@ -2,61 +2,63 @@
 
 #### Criando imagem Docker local para o container
 
-Criar o arquivo **Dockerfile**
+> Utilizei neste exemplo uma api rest myapp.war feito em SpringBoot para facil entendimento
+
+Crie o arquivo **Dockerfile**
 ```
 FROM alpine
-WORKDIR /opt/npsys
+WORKDIR /opt/app
 RUN apk update && apk add vim openjdk11-jre
-COPY npsys.sh .
-CMD ash npsys.sh
+COPY runapp.sh .
+CMD ash runapp.sh
 ```
 
-Gerar a imagem 
+Construa a imagem docker
 ```
-docker image build -t karyon/npsys-api .
+docker image build -t oregontecnologia/myapp-api:1.0.0 .
 ```
 
-Subir para o dockerhub ou [Crie um servidor de respositório local](11-server-registry-local.md)
+Transfira a imagem para o dockerhub ou [Crie um servidor de respositório local](11-server-registry-local.md)
 ```
 docker login
 
 username:
 password:
 
-docker push karyon/npsys-api:latest
+docker push oregontecnologia/myapp-api:1.0.0
 ```
 
-Verificar o que está rodando
+Verifique se está rodando
 ```
 kubectl get pods -o wide
-kubectl get deployments -o wide
+kubectl get deploy -o wide
 ```
 
-### Criar um container com a imagem criada
+Crie um container com a imagem criada
 ```
-kubectl create deploy npsys-api --image=karyon/npsys-api
-```
-
-### Criar um serviço para acesso externo a aplicação
-```
-kubectl expose deployment npsys-api --type=LoadBalancer --external-ip=192.168.239.158 --port=8080
+kubectl create deploy myapp-deploy --image=oregontecnologia/myapp-api:1.0.0
 ```
 
-Para derrubar a aplicação
+Crie um serviço para acesso externo a aplicação
 ```
-kubectl delete deployment npsys-api
+kubectl expose deploy myapp-deploy --type=LoadBalancer --external-ip=10.0.10.100 --port=80
+```
+
+Para remover a aplicação
+```
+kubectl delete deploy myapp-deploy
 ```
 
 ### Atualizando e voltando uma versão da aplicação.
 
 Para atualizar a aplicação
 ```
-kubectl set image deployments/npsys-api npsys-api=npsys-api:0.0.2
+kubectl set image deployments/myapp-deploy myapp-api=oregontecnologia/myapp-api:1.0.2 --record
 ```
 
-Voltando uma atualizacao
+Para voltar uma atualização
 ```
-kubectl rollout undo deployments/npsys-api
+kubectl rollout undo deployments/myapp-deploy
 
 ```
 
@@ -64,12 +66,12 @@ kubectl rollout undo deployments/npsys-api
 
 Escalando manualmente 3 replicas do container
 ```
-kubectl scale deployment npsys-api --replicas=3
+kubectl scale deploy myapp-deploy --replicas=3
 ```
 
 Escalando automaticamente iniciando com 2 replicas até 15 réplicas escalando quando a CPU atingir 80% de utilização.
 ```
-kubectl autoscale deployment npsys-api --min=2 --max=15 --cpu-percent=80
+kubectl autoscale deploy myapp-deploy --min=2 --max=15 --cpu-percent=80
 ```
 
 Para verificar o autoscale
@@ -79,5 +81,5 @@ kubectl get hpa
 
 Para remover o autoscale
 ```
-kubectl delete hpa npsys-api
+kubectl delete hpa myapp-deploy
 ```

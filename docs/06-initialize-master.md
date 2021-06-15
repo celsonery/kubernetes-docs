@@ -6,10 +6,10 @@ kubeadm init
 
 ou
 
-kubeadm init --pod-network-cidr=10.244.0.0/16 --apiserver-advertise-address=10.0.2.100 --kubernetes-version="1.16.0"
+kubeadm init --pod-network-cidr=10.244.0.0/16 --apiserver-advertise-address=10.0.10.100 --kubernetes-version="1.16.0"
 ```
 
-> A Saida do mostra:
+> A Saida será algo como:
 ```
 [init] Using Kubernetes version: v1.13.0
 [preflight] Running pre-flight checks
@@ -48,27 +48,24 @@ Then you can join any number of worker nodes by running the following on each as
 kubeadm join 10.0.2.100:6443 --token d1dyaj.31zxywbg93s1ywjy --discovery-token-ca-cert-hash sha256:71a91721595fde66b6382908d801266602a14de8e16bdb7a3cede21509427009
 
 ```
-> Anote o token e a chave para usar nos escravos.
+> Anote o token e a chave para usar nos nós escravos.
 
-Para executar o kubernetes
+Para executar o kubernetes copie o arquivo **admin.conf**
 ```
 mkdir -p $HOME/.kube
 cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
 chown $(id -u):$(id -g) $HOME/.kube/config
 ```
 
-Rodar o comando abaixo para verificar o status do cluster
+Rode o comando abaixo para verificar o status do cluster
 ```
 kubectl get pods --all-namespaces
 ```
 > A Saida deve estar assim:
 ![All namespaces em pending](imgs/saida_all_namespaces01.png)
 
-Criar uma rede virtual ( namely, calico, canal, flannel, wave )
+Crie uma rede virtual ( namely, calico, canal, flannel, wave )
 ```
-Rede flannel:
-kubectl apply -f https://raw.githubusercontent.com/coreos/flannel/master/Documentation/kube-flannel.yml
-
 Rede wave:
 export kubever=$(kubectl version | base64 | tr -d '\n')
 kubectl apply -f "https://cloud.weave.works/k8s/net?k8s-version=$kubever"

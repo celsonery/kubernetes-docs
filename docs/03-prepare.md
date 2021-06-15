@@ -3,20 +3,21 @@
 ### Requisitos
 
 1. Mínimo de 3 servers
-1. Servidor master com 2 CPU's (cores)
+1. Servidor master (control-plane) com 2 CPU's (cores) 2 GB de RAM
+1. Servidor slaves (workers) com 1 CPU e 1 GB de RAM
 1. Acesso administrativo (root)
 
 
 ### Preparação
-Adicionar nomes e IPs das maquinas no arquivo **/etc/hosts**
+Adicione nomes e IPs das maquinas no arquivo **/etc/hosts**
 
 ```
-10.0.2.100  master.empresa.local    master
-10.0.2.101  slav01.empresa.local    slav01
-10.0.2.102  slav02.empresa.local    slav02
+10.0.10.100  master.empresa.local    master
+10.0.10.101  slav01.empresa.local    slav01
+10.0.10.102  slav02.empresa.local    slav02
 ```
 
-Configurar o firewall
+Configure o firewall
 
 Master:
 
@@ -36,13 +37,13 @@ Slaves:
 | 10251 | TCP |
 | 10255 | TCP |
 
-Desabilitar o SWAP
+Desabilite o SWAP
 ```
 # swapon -s
 # swapoff -a
 ```
 
-Editar o arquivo **/etc/fstab** e comentar a linha correspondente
+Edite o arquivo **/etc/fstab** e comente a linha correspondente ao arquivo de troca (swap)
 ```
 #/dev/mapper/master--vg-swap_1 none swap    sw  0   0
 ```
@@ -53,9 +54,9 @@ Após toda configuração verifique se as maquinas estão se enxergando com o **
 # ping slav02
 ```
 
-Se tudo correu bem e obteve resposta dos nós escravos e vice-versa reinicie o computador.
+Se tudo correu bem e obteve resposta dos nós escravos e vice-versa reinicie os computadores.
 ```
 # shutdown -r now
 ```
-Continuar para a [Instalação do docker](04-install-docker.md)
+Continue para a [Instalação do docker](04-install-docker.md)
 

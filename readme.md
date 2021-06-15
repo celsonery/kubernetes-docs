@@ -1,9 +1,8 @@
-# Bem-vindo ao guia básico de contrução de cluster de Kubernetes
+# Bem-vindo ao guia básico de construção de cluster com Kubernetes
 
 Estes documentos informa como instalar e configurar um ambiente kubernetes para uso.
 
-> Todo ambiente foi construido em cima da distribuição Debian 9 (stretch).
-este ambiente não obtive sucesso na versão 10 (buster) do Debian.
+> Todo ambiente foi construido em cima da distribuição Debian 9 (stretch) e 10 (buster) do Debian.
 
 > Autor: **[Celso Nery](https://github.com/celsonery)**
 

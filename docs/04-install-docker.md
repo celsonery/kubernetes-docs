@@ -1,6 +1,6 @@
 # Instalação docker no Debian 9 / 10
 
-Atualizar o sistema
+Atualize o sistema
 
 > Utilize o "sudo" antes dos comandos caso esteja fazendo como usuário comum.
 ```
@@ -8,12 +8,12 @@ Atualizar o sistema
 # apt upgrade
 ```
 
-Instalar pacotes necessários para a instalação.
+Instale pacotes necessários para a instalação.
 ```
 # apt install curl gnupg2 apt-transport-https software-properties-common ca-certificates
 ```
 
-Adicionar repositório do Docker no Debian
+Adicione repositório do Docker no Debian
 ```
 # curl -fsSL https://download.docker.com/linux/debian/gpg | apt-key add -
 ```
@@ -30,7 +30,7 @@ Debian 10
 deb [arch=amd64] https://download.docker.com/linux/debian buster stable
 ```
 
-instalar o docker
+instale o docker
 > Caso tenha problemas ao executar um container instale a versão anteriror [18.06.0]
 ```
 # apt update
@@ -41,8 +41,8 @@ ou
 # apt install docker-ce=18.06.0~ce~3-0~debian
 ```
 
-Configurar o daemon
-Editar o arquivo **/etc/docker/daemon.json**
+Configure o daemon
+Crie o arquivo **/etc/docker/daemon.json**
 ```
 {
     "exec-opts": ["native.cgroupdriver=systemd"],
@@ -54,7 +54,7 @@ Editar o arquivo **/etc/docker/daemon.json**
 }
 ```
 
-Criar o diretorio **/etc/systemd/system/docker.service.d**
+Crie o diretorio **/etc/systemd/system/docker.service.d**
 ```
 # mkdir -p /etc/systemd/system/docker.service.d
 ```
@@ -92,7 +92,7 @@ Server:
   Experimental:     false
 ```
 
-Dar permissão de usuário comum usar containers
+De permissão para usuário comum usar containers
 ```
 # usermod -aG docker $USER
 ```
@@ -114,4 +114,4 @@ http://127.0.0.1
 ```
 
 Mais informações sobre docker acesse: [docker](01-docker.md)
-Continuar para [kubernetes instalação](05-install-kubernetes.md)
+Continue para [kubernetes instalação](05-install-kubernetes.md)
