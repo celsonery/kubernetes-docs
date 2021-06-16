@@ -1,5 +1,11 @@
 ## Volumes no Docker
 
+kubectl get persistentvolume
+kubectl get persistentvolumeclaim
+kubectl get storageclass
+
+
+
 Criar o volume
 ```
 docker volume create nome_do_vol

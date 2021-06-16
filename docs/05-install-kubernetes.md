@@ -1,5 +1,39 @@
 # Instalação kubernetes no Debian
 
+Carregue os modulos **overlay** e **br_netfilter**
+
+```
+# modprobe overlay
+# modprobe br_netfilter
+```
+
+Crie o arquivo /etc/sysctl.d/98-kubernetes-cri.conf
+```
+net.bridge.bridge-nf-call-iptables  = 1
+net.ipv4.ip_forward                 = 1
+net.bridge.bridge-nf-call-ip6tables = 1
+```
+
+Carregue as configurações criadas
+```
+# sysctl --system
+```
+
+Instale o containerd
+```
+# apt install containerd
+```
+
+Sobreescreva o arquivo de configuração do containerd
+```
+# containerd config default > /etc/containerd/config.toml
+```
+
+Reinicie o serviço do containerd
+```
+# systemctl restart containerd
+```
+
 Adicione o repositório do kubernetes
 
 > Utilize o "sudo" antes dos comandos caso esteja utilizando como usuário comum.
@@ -21,14 +55,9 @@ Atualize a lista de pacotes
 apt update
 ```
 
-Instale o kubernetes no master (control-plane)
+Instale o kubernetes
 ```
 apt install kubelet kubeadm kubectl
-```
-
-Nos nós escravos (workers) instale somente o kubelet
-```
-apt install kubelet
 ```
 
 Marque os pacotes para prevenir modificações.

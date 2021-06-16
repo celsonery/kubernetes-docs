@@ -2,16 +2,16 @@
 
 - No Master execute **kubeadm init** para inicializar o cluster pela primeira vez.
 ```
-kubeadm init
+# kubeadm init
 
 ou
 
-kubeadm init --pod-network-cidr=10.244.0.0/16 --apiserver-advertise-address=10.0.10.100 --kubernetes-version="1.21.1"
+# kubeadm init --pod-network-cidr=10.244.0.0/16 --apiserver-advertise-address=10.0.10.100 --kubernetes-version="1.21.1"
 ```
 
 > A Saida será algo como:
 ```
-[init] Using Kubernetes version: v1.13.0
+[init] Using Kubernetes version: v1.21.1
 [preflight] Running pre-flight checks
 [preflight] Pulling images required for setting up a Kubernetes cluster
 [preflight] This might take a minute or two, depending on the speed of your internet connection
