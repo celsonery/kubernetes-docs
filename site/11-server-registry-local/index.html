@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Registro server local - Mini Guia Kubernetes</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Registro server local";
+        var mkdocs_page_input_path = "11-server-registry-local.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <script src="../js/jquery-3.6.0.min.js" defer></script>
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+      <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> Mini Guia Kubernetes
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="..">Início</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../01-docker/">Docker</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../02-sobre/">Sobre</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../03-prepare/">Preparação</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../04-install-docker/">Instalação docker</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../05-install-kubernetes/">Instalação kubernetes</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../06-initialize-master/">Iniciando nó master</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../07-initialize-slave/">Integrando um nó escravo ao cluster</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../08-running/">Testando e colocando pra funcionar</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../09-install-minikube/">Minikube - Ambiente para testes</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../10-install-openshift/">Openshift - Ambiente frontend</a>
+                </li>
+              </ul>
+              <ul class="current">
+                <li class="toctree-l1 current"><a class="reference internal current" href="./">Registro server local</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#configuracoes-iniciais">Configurações iniciais</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#criar-o-servidor">Criar o servidor</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#testando-se-o-registry-esta-funcionando">Testando se o registry está funcionando</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#tageando-uma-imagem">Tageando uma imagem</a>
+    </li>
+    </ul>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Gua rápido</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../commands/">Guia rapido de commandos</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../using/">Guia rapdido</a>
+                  </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../LICENSE/">Licença</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">Mini Guia Kubernetes</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" alt="Docs"></a> &raquo;</li>
+      <li>Registro server local</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="criando-um-servidor-de-repositorios-local">Criando um servidor de repositórios local</h1>
+<h2 id="configuracoes-iniciais">Configurações iniciais</h2>
+<blockquote>
+<p>Realize a configuração no servidor e em todos os nós. 
+OBS.: Configuração somente para teste, usar certificado o conexão TLS para produção.</p>
+<p>Acrescente no arquivo <strong>/etc/docker/daemon.json</strong> host: ip ou nome da maquina onde está o registry e port: a porta :P</p>
+</blockquote>
+<pre><code>{
+    &quot;insecure-registries&quot;: [ &quot;host:port&quot; ]
+}
+</code></pre>
+<blockquote>
+<p>Reinicie o serviço docker</p>
+</blockquote>
+<pre><code># systemctl restart docker
+</code></pre>
+<h2 id="criar-o-servidor">Criar o servidor</h2>
+<blockquote>
+<p>Para criar um servidor local precisamos criar um container com a imagem registry com o nome que desejarmos.</p>
+</blockquote>
+<pre><code>$ docker run -d -p 5000:5000 --restart=always --name=repositorio registry
+
+-d                  &lt;- rodar como daemon
+-p 5000:5000        &lt;- porta
+--restart=always    &lt;- auto reiniciar se falhar
+--name=repositorio  &lt;- nome do repositorio
+registry            &lt;- imagem docker para o servidor 
+</code></pre>
+<h2 id="testando-se-o-registry-esta-funcionando">Testando se o registry está funcionando</h2>
+<blockquote>
+<p>Aceese via browser</p>
+</blockquote>
+<pre><code>http://registry.zion.local:5000/v2/
+</code></pre>
+<h2 id="tageando-uma-imagem">Tageando uma imagem</h2>
+<p>Listando as imagens</p>
+<pre><code>$ docker image ls
+</code></pre>
+<p>Tageando a imagem <strong>oregontecnologia/myapp-api</strong></p>
+<pre><code>$ docker tag oregontecnologia/myapp-api registry.zion.local:5000/myapp-api
+</code></pre>
+<p>Subir a imagem</p>
+<pre><code>$ docker push registry.zion.local:5000/myapp-api
+</code></pre>
+<p>Rodando um container kubernetes com a imagem do servidor local</p>
+<pre><code>$ kubectl create deploy myapp-api --image=registry.zion.local:5000/myapp-api
+</code></pre>
+<p>Verifique se está rodando</p>
+<pre><code>$ kubectl get pods -o wide
+</code></pre>
+<h1 id="servidor-remoto">Servidor remoto</h1>
+<h3 id="criando-autenticacao-com-htpasswd">Criando autenticação com htpasswd</h3>
+<p>Instalando apache2-utils para utilizar htpasswd</p>
+<pre><code>$ sudo apt install apache2-utils
+</code></pre>
+<p>Crie uma pasta auth na pasta home do usuário e entrar nela</p>
+<pre><code>$ mkdir ~/home-user/auth &amp;&amp; cd $_
+</code></pre>
+<p>Crie o arquivo registry.password com a flag '-c' adicionando o usuario 'nome_usuario' criptotagrafando com -B</p>
+<pre><code>$ htpasswd -Bc registry.password nome_usuário
+</code></pre>
+<p>Caso queira criar mais usuários não utilizar o '-c'</p>
+<pre><code>$ htpasswd -B registry.password nome_do_novo_usuário
+</code></pre>
+<h3 id="autenticando-e-verificando-se-esta-funcionando">Autenticando e verificando se está funcionando</h3>
+<pre><code>http://nome-ou-ip-do-servidor:5000/v2
+</code></pre>
+<h2 id="usando-docker-composeyaml">Usando docker-compose.yaml</h2>
+<pre><code>$ vim docker-compose.yml
+</code></pre>
+<pre><code class="language-yaml">version: '3'
+
+services:
+  registry:
+    image: registry:2
+    ports:
+    - &quot;5000:5000&quot;
+    environment:
+      REGISTRY_AUTH: htpasswd
+      REGISTRY_AUTH_HTPASSWD_REALM: Registry
+      REGISTRY_AUTH_HTPASSWD_PATH: /auth/registry.password
+      REGISTRY_STORAGE_FILESYSTEM_ROOTDIRECTORY: /data
+    volumes:
+      - ./auth:/auth
+      - ./data:/data
+    restart: always
+</code></pre>
+<p>Subindo o serviço registry</p>
+<pre><code>$ docker-compose up
+</code></pre>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../10-install-openshift/" class="btn btn-neutral float-left" title="Openshift - Ambiente frontend"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../commands/" class="btn btn-neutral float-right" title="Guia rapido de commandos">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../10-install-openshift/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../commands/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme_extra.js" defer></script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>

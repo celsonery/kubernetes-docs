@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Guia rapido de commandos - Mini Guia Kubernetes</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Guia rapido de commandos";
+        var mkdocs_page_input_path = "commands.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <script src="../js/jquery-3.6.0.min.js" defer></script>
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+      <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> Mini Guia Kubernetes
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="..">Início</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../01-docker/">Docker</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../02-sobre/">Sobre</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../03-prepare/">Preparação</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../04-install-docker/">Instalação docker</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../05-install-kubernetes/">Instalação kubernetes</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../06-initialize-master/">Iniciando nó master</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../07-initialize-slave/">Integrando um nó escravo ao cluster</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../08-running/">Testando e colocando pra funcionar</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../09-install-minikube/">Minikube - Ambiente para testes</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../10-install-openshift/">Openshift - Ambiente frontend</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../11-server-registry-local/">Registro server local</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Gua rápido</span></p>
+              <ul class="current">
+                  <li class="toctree-l1 current"><a class="reference internal current" href="./">Guia rapido de commandos</a>
+    <ul class="current">
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../using/">Guia rapdido</a>
+                  </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../LICENSE/">Licença</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">Mini Guia Kubernetes</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" alt="Docs"></a> &raquo;</li>
+          <li>Gua rápido &raquo;</li>
+      <li>Guia rapido de commandos</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <p>minkube manual</p>
+<h1 id="iniciando-cluster-kubernetes-minikube">Iniciando cluster kubernetes - minikube</h1>
+<p>minikube version
+minikube start</p>
+<p>kubectl version
+kubectl cluster-info
+kubectl get nodes</p>
+<h1 id="deploy-de-uma-aplicacao-minikube">Deploy de uma aplicacao - minikube</h1>
+<p>kubectl run kubernetes-bootcamp --image=gcr.io/google-samples/kubernetes-bootcamp:v1 --port=8080</p>
+<p>kubectl get deployments</p>
+<p>kubectl proxy</p>
+<p>export POD_NAME=$(kubectl get pods -o go-template --template '{{range .items}}{{.metadata.name}}{{"\n"}}{{end}}')
+echo Name of the Pod: $POD_NAME</p>
+<p>curl http://localhost:8001/api/v1/namespaces/default/pods/$POD_NAME/proxy/</p>
+<h1 id="visualizando-pods-e-nos">Visualizando pods e nos</h1>
+<p>kubectl get - listar recursos
+kubectl describe - mostra informações detalhadas sobre um recurso
+kubectl logs - imprima os logs de um contêiner em um pod
+kubectl exec - executa um comando em um container em um pod</p>
+<hr />
+<p>kubectl get pods
+kubectl describe pods
+kubectl logs $POD_NAME</p>
+<hr />
+<p>kubectl exec $POD_NAME env
+kubectl exec -ti $POD_NAME bash</p>
+<h1 id="expondo-a-aplicacao">Expondo a aplicacao</h1>
+<p>1 - Criando novo servico</p>
+<p>kubectl get pods
+kubectl get services</p>
+<p>kubectl expose deployment/kubernetes-bootcamp --type="NodePort" --port 8080</p>
+<p>kubectl get services</p>
+<p>kubectl describe services/kubernetes-bootcamp</p>
+<p>export NODE_PORT=$(kubectl get services/kubernetes-bootcamp -o go-template='{{(index .spec.ports 0).nodePort}}')</p>
+<p>echo NODE_PORT=$NODE_PORT</p>
+<p>curl $(minikube ip):$NODE_PORT</p>
+<p>kubectl describe deployment
+kubectl get pods -l run=kubernetes-bootcamp
+kubectl get services -l run=kubernetes-bootcamp</p>
+<p>2 - Usando labels
+kubectl describe deployment</p>
+<p>kubectl get pods -l run=kubernetes-bootcamp</p>
+<p>kubectl get services -l run=kubernetes-bootcamp</p>
+<p>export POD_NAME=$(kubectl get pods -o go-template --template '{{range .items}}{{.metadata.name}}{{"\n"}}{{end}}')</p>
+<p>echo name of the pod: $POD_NAME</p>
+<p>kubectl label pod $POD_NAME app=v1</p>
+<p>kubectl describe pods $POD_NAME</p>
+<p>kubectl get pods -l app=v1</p>
+<p>3 - Deletando um service
+kubectl delete service -l run=kubernetes-bootcamp</p>
+<p>kubectl get services</p>
+<p>curl $(minikube ip):$NODE_PORT</p>
+<p>kubectl exec -ti $POD_NAME curl localhost:8080</p>
+<h1 id="escalando-a-aplicacao">Escalando a aplicacao</h1>
+<p>1 - Escalando um deployment
+kubectl get deployments</p>
+<p>kubectl scale deployments/kubernetes-bootcamp --replicas=4</p>
+<p>kubectl get deployments</p>
+<p>kubectl get pods -o wide
+kubectl describe deployments/kubernetes-bootcamp</p>
+<p>2 - Load Balancing
+kubectl describe services/kubernetes-bootcamp</p>
+<p>export NODE_PORT=$(kubectl get services/kubernetes-bootcamp -o go-template='{{(index .spec.ports 0).nodePort}}')</p>
+<p>echo NODE_PORT=$NODE_PORT</p>
+<p>curl 4(minikube ip):$NODE_PORT</p>
+<p>3 - Diminuindo a Escala
+kubectl scale deployments/kubernetes-bootcamp --replicas=2</p>
+<p>kubectl get deployments</p>
+<p>kubectl get pods -o wide</p>
+<h1 id="atualizacao-continua">Atualizacao continua</h1>
+<p>1 - Atualizando a versao do app
+kubectl get deployments</p>
+<p>kubectl get pods</p>
+<p>kubectl describe pods</p>
+<p>kubectl set image deployments/kubernetes-bootcamp kubernetes-bootcamp=jocatalin/kubernetes-bootcamp:v2</p>
+<p>kubectl get pods</p>
+<p>2 - Verificando uma atualizacao
+kubectl describe services/kubernetes-bootcamp</p>
+<p>export NODE_PORT=$(kubectl get services/kubernetes-bootcamp -o go-template='{{(index .spec.ports 0).nodePort}}')</p>
+<p>echo $NODE_PORT</p>
+<p>curl $(minikube ip):$NODE_PORT</p>
+<p>kubectl rollout status
+deployments/kubernetes-bootcamp</p>
+<p>kubectl describe pods</p>
+<p>3 - Voltando uma atualizacao
+kubectl set image deployments/kubernetes=bootcamp kubernetes-bootcamp=gcr.io/google-samples/kubernetes-bootcamp:v10</p>
+<p>kubectl get deployments</p>
+<p>kubectl get pods</p>
+<p>kubectl describe pods</p>
+<p>kubectl rollout undo deployments/kubernetes-bootcamp</p>
+<p>kubectl get pods</p>
+<p>kubectl describe pods</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../11-server-registry-local/" class="btn btn-neutral float-left" title="Registro server local"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../using/" class="btn btn-neutral float-right" title="Guia rapdido">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../11-server-registry-local/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../using/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme_extra.js" defer></script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>
