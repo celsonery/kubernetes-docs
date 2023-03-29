@@ -64,3 +64,21 @@ Gitlab
 Runner
 ```
 /opt/gitlab/runners/shared/config/config.toml
+```
+
+### Ativação **SSL**
+```
+```
+
+### Ativação **Envio de e-mail**
+```
+```
+
+### Ativação **Container Registry**
+```
+```
+
+### Ativação **Gitlab-runner**
+```
+```
+

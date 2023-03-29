@@ -33,7 +33,7 @@ spec:
 
 Executando o container
 ```
-kubectl create -f nginx-deployment.yaml
+kubectl apply -f nginx-deployment.yaml
 ```
 
 Verficando o container
@@ -61,7 +61,7 @@ spec:
 
 Crie o serviço
 ```
-kubectl create -f nginx-service.yaml
+kubectl apply -f nginx-service.yaml
 ```
 
 Verficando o serviço
