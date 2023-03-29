@@ -5,14 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <link rel="shortcut icon" href="../img/favicon.ico" />
-    <title>Sonarqube - CE - Mini Guia Kubernetes</title>
+    <title>Instalando sonarqube - Mini Guia Kubernetes</title>
     <link rel="stylesheet" href="../css/theme.css" />
     <link rel="stylesheet" href="../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
     
       <script>
         // Current page data
-        var mkdocs_page_name = "Sonarqube - CE";
+        var mkdocs_page_name = "Instalando sonarqube";
         var mkdocs_page_input_path = "24-sonarqube.md";
         var mkdocs_page_url = null;
       </script>
@@ -77,6 +77,10 @@
                 </li>
               </ul>
               <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../08-2-running-yamls/">Testando usando arquivos yamls</a>
+                </li>
+              </ul>
+              <ul>
                 <li class="toctree-l1"><a class="reference internal" href="../09-install-minikube/">Minikube - Ambiente para testes</a>
                 </li>
               </ul>
@@ -86,6 +90,70 @@
               </ul>
               <ul>
                 <li class="toctree-l1"><a class="reference internal" href="../11-server-registry-local/">Registro server local</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../12-helm/">Usando o gerenciador de pacotes helm</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../13-metric-server/">Instando metric-server</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../14-prometheus/">Instalando prometheus</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../15-grafana/">Instalando grafana</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../16-ingress-controller/">Instalando ingress-controller</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../17-cert-manager/">Instalando cert-manager</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../18-volumes-docker/">Usando volumes em docker</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../19-volumes-k8s/">Usando volumes no k8s</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../20-k3s/">Usando k3s para desenvolvimento</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../23-gitlab/">Instalando gitlab</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../24-portainer/">Instalando portainer</a>
+                </li>
+              </ul>
+              <ul class="current">
+                <li class="toctree-l1 current"><a class="reference internal current" href="./">Instalando sonarqube</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#instalacao">Instalação</a>
+    </li>
+    </ul>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../25-renovar-certs/">Renovando certificados SSL</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../26-redis-cluster/">Instalando redis</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../regcred/">Usando secrets</a>
                 </li>
               </ul>
               <p class="caption"><span class="caption-text">Gua rápido</span></p>
@@ -113,7 +181,7 @@
         <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
     <li><a href=".." class="icon icon-home" alt="Docs"></a> &raquo;</li>
-      <li>Sonarqube - CE</li>
+      <li>Instalando sonarqube</li>
     <li class="wy-breadcrumbs-aside">
     </li>
   </ul>
@@ -127,6 +195,10 @@
               
             </div>
           </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../24-portainer/" class="btn btn-neutral float-left" title="Instalando portainer"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../25-renovar-certs/" class="btn btn-neutral float-right" title="Renovando certificados SSL">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
 
   <hr/>
 
@@ -148,6 +220,10 @@
   <span class="rst-current-version" data-toggle="rst-current-version">
     
     
+      <span><a href="../24-portainer/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../25-renovar-certs/" style="color: #fcfcfc">Next &raquo;</a></span>
     
   </span>
 </div>

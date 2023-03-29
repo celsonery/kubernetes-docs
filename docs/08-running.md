@@ -71,7 +71,7 @@ kubectl scale deploy myapp-deploy --replicas=3
 
 Escalando automaticamente iniciando com 2 replicas até 15 réplicas escalando quando a CPU atingir 75% de utilização.
 ```
-kubectl autoscale deploy myapp-deploy --min=2 --max=15 --cpu-percent=75
+kubectl autoscale deploy myapp-deploy --min=2 --max=10 --cpu-percent=75
 ```
 
 Para verificar o autoscale
