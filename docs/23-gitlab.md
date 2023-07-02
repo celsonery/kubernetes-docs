@@ -43,7 +43,20 @@ docker exec -it <name of container> gitlab-rake gitlab:check SANITIZE=true
 
 
 ### Update Gitlab
+- Realizar o update somente após os backups estiverem terminados
 
+- Conectar na maquina com o usuário Bagarote
+```
+$ cd dockers/gitlab
+
+$ docker-compose pull
+$ docker-compose up -d
+```
+
+- Aguardar o container gitlab ficar em **Healthy**
+```
+$ watch -n2 docker ps
+```
 
 ### Liberar espaço
 

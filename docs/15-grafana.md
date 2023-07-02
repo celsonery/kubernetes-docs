@@ -25,3 +25,8 @@ https://grafana.com/
 ```
 grafana-cli admin reset-admin-password --password-from-stdin
 ```
+
+- Adicionar Prometheus
+```
+http://metrics.bagarote.com.br
+```
