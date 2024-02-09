@@ -7,7 +7,16 @@ Execute o comando abaixo em cada nó que desejar ingressar no cluster
 kubeadm join 10.0.10.100:6443 --token 9e0xeu.s0if3... --discovery-token-ca-cert-hash sha256:3a328e56729515d...
 ```
 
+> Caso não lembre ou não tenha guardado, será preciso gerar um novo token.
+
+No Control-Plane execute o seguinte comando:
+
+```sh
+# kubeadm token create --print-join-command
+```
+
 > Verique no master os nós em execução
+
 ```
 kubectl get nodes
 

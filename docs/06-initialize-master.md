@@ -66,9 +66,10 @@ kubectl get pods --all-namespaces
 
 Crie uma rede virtual ( namely, calico, canal, flannel, weave )
 
+
 Exemplo rede flannel:
-```
-kubectl apply -f https://raw.githubusercontent.com/coreos/flannel/master/Documentation/kube-flannel.yml
+```bash
+kubectl apply -f https://raw.githubusercontent.com/flannel-io/flannel/v0.20.2/Documentation/kube-flannel.yml
 ```
 
 Exemplo rede weave:

@@ -50,4 +50,10 @@ spec:
 
 ```
 
+#### Kube-state-metrics
 
+1 - service-account.yaml
+2 - cluster-role.yaml
+3 - cluster-role-binding.yaml
+4 - deployment.yaml
+5 - service.yaml

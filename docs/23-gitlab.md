@@ -63,7 +63,7 @@ $ watch -n2 docker ps
 - Entrar em cada aplicação e remover imagens antigas
 
 - Script para remover imagens antigas e liberar espaço em disco
-for i in `docker image ls | grep etotem/front | egrep -v '(dev|hml|latest|v1391|v1601|v1639)' | awk '{print $2}'`;do docker image rm "registry.bagarote.com.br/karyon/etotem/front:"$i;done
+for i in `docker image ls | grep etotem/front | awk '{print $2}' | egrep -v '(dev|hml|latest|v1391|v1601|v1639)'`;do docker image rm "registry.bagarote.com.br/karyon/etotem/front:"$i;done
 
 ### Migração
 - Transferir os aquivos abaixo todos com permissao 600

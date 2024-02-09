@@ -1,27 +1,27 @@
-## Volumes no Docker
+## Volumes no Kubernetes
 
-kubectl get persistentvolume
-kubectl get persistentvolumeclaim
-kubectl get storageclass
+kubectl get persistentvolume | pv
+kubectl get persistentvolumeclaim | pvc
+kubectl get storageclass | sc
 
 
 
 Criar o volume
 ```
-docker volume create nome_do_vol
+
 ```
 
 Listar os volumes
 ```
-docker volume ls
+
 ```
 
 Inspecionar o volume - visualizar mais detalhes
 ```
-docker ispect nome_do_vol
+
 ```
 
 remover o volume
 ```
-docker volume rm nome_do_vol
+
 ```

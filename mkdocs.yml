@@ -1,5 +1,7 @@
 site_name: Mini Guia Kubernetes
 theme: readthedocs
+#theme: bootstrap386
+#theme: gitbook
 nav:
     - Início: index.md
     - Docker: 01-docker.md
