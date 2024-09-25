@@ -2,7 +2,6 @@
 
 ### Instalação
 
-
 #### Reset Root Password
 
 ```
@@ -46,9 +45,8 @@ docker exec -it <name of container> gitlab-rake gitlab:check SANITIZE=true
 - Realizar o update somente após os backups estiverem terminados
 
 - Conectar na maquina com o usuário Bagarote
+- Altere o arquivo docker-compose.yml e adicione a nova versao na imagem docker
 ```
-$ cd dockers/gitlab
-
 $ docker-compose pull
 $ docker-compose up -d
 ```
@@ -60,10 +58,20 @@ $ watch -n2 docker ps
 
 ### Liberar espaço
 
-- Entrar em cada aplicação e remover imagens antigas
+- Entrar em cada aplicação e remover imagens antigas - Docker
 
 - Script para remover imagens antigas e liberar espaço em disco
 for i in `docker image ls | grep etotem/front | awk '{print $2}' | egrep -v '(dev|hml|latest|v1391|v1601|v1639)'`;do docker image rm "registry.bagarote.com.br/karyon/etotem/front:"$i;done
+
+- Script 2 para remover imagens antigas e liberar espaço em disco
+
+
+- Liberar espaço nos registry - Gitlab
+Entrar no container gitlab
+```
+$ docker exec -it 
+
+
 
 ### Migração
 - Transferir os aquivos abaixo todos com permissao 600
@@ -84,8 +92,47 @@ Runner
 ```
 
 ### Ativação **Envio de e-mail**
+- Editar o arquivo /opt/gitlab/config/gitlab.rb
+
 ```
+gitlab_rails['smtp_enable'] = true
+gitlab_rails['smtp_address'] = "smtp.server"
+gitlab_rails['smtp_port'] = 465
+# gitlab_rails['smtp_user_name'] = "smtp user"
+# gitlab_rails['smtp_password'] = "smtp password"
+gitlab_rails['smtp_domain'] = "example.com"
+gitlab_rails['smtp_authentication'] = "login"
+gitlab_rails['smtp_enable_starttls_auto'] = true
+gitlab_rails['smtp_openssl_verify_mode'] = 'peer'
 ```
+
+- Entrar no container gitlab
+```
+$ docker exec -it gitlab bash
+```
+
+- Criar as credenciais do email
+```
+# gitlab-rake gitlab:smtp:secret:edit
+```
+
+- Apos o editor abrir insira as credenciais
+```
+user_name: 'smtp user'
+password: 'smtp password'
+```
+
+- Após as configurações feitas, reinicie as configurações do gitlab
+```
+$ gitlab-ctl reconfigure
+
+```
+
+- Documentação oficial
+```
+https://docs.gitlab.com/omnibus/settings/smtp.html
+```
+
 
 ### Ativação **Container Registry**
 ```
@@ -94,4 +141,3 @@ Runner
 ### Ativação **Gitlab-runner**
 ```
 ```
-

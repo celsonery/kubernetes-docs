@@ -57,3 +57,11 @@ spec:
 3 - cluster-role-binding.yaml
 4 - deployment.yaml
 5 - service.yaml
+
+
+## Instalação via yaml
+1 - namespace
+2 - clusterRole
+3 - config-map
+4 - prometheus-deployment
+5 - prometheus-service

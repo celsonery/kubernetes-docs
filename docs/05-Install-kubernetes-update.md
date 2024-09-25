@@ -83,6 +83,33 @@ Crie o arquivo: **/etc/apt/sources.list.d/kubernetes.list**
 deb http://apt.kubernetes.io/ kubernetes-xenial main"
 ```
 
+### Nova atualizacao 06/03/2024
+```
+$ echo "deb [signed-by=/etc/apt/keyrings/kubernetes-apt-keyring.gpg] https://pkgs.k8s.io/core:/stable:/v1.28/deb/ /" | sudo tee /etc/apt/sources.list.d/kubernetes.list
+$ curl -fsSL https://pkgs.k8s.io/core:/stable:/v1.28/deb/Release.key | sudo gpg --dearmor -o /etc/apt/keyrings/kubernetes-apt-keyring.gpg
+```
+install Kubernetes Cluster with Kubeadm
+kubelet doesn’t appreciate the command-line options anymore (these are deprecated). Instead, I suggest to create a configuration file, say ‘kubelet.yaml’ with following content.
+
+```
+$ vi kubelet.yaml
+apiVersion: kubeadm.k8s.io/v1beta3
+kind: InitConfiguration
+---
+apiVersion: kubeadm.k8s.io/v1beta3
+kind: ClusterConfiguration
+kubernetesVersion: "1.28.0" # Replace with your desired version
+controlPlaneEndpoint: "k8s-master"
+---
+apiVersion: kubelet.config.k8s.io/v1beta1
+kind: KubeletConfiguration
+```
+
+```
+$ sudo kubeadm init --config kubelet.yaml
+```
+###
+
 Atualize a lista de pacotes
 ```bash
 sudo apt update

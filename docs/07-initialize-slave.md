@@ -31,3 +31,8 @@ kubectl get nodes -o wide
 
 
 Continue para [Usando o cluster](08-running.md)
+
+
+- Verificar Worker 3 fora do Pool - OK
+		kubectl --kubeconfig=/home/celso/.kube/config.bagarote describe node node3 | grep Taint 
+		kubectl --kubeconfig=/home/celso/.kube/config.bagarote taint node node3 node.kubernetes.io/disk-pressure:NoSchedule-
