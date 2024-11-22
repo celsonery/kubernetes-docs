@@ -20,18 +20,26 @@ Adicione repositório do Docker no Debian
 
 Crie o arquivo: **/etc/apt/sources.list.d/docker.list**
 
-Debian 9
+Debian 9 - Stretch
 ```
 deb [arch=amd64] https://download.docker.com/linux/debian stretch stable
 ```
 
-Debian 10
+Debian 10 - Buster
 ```
 deb [arch=amd64] https://download.docker.com/linux/debian buster stable
 ```
 
+Debian 11 - Bullseye
+```sh
+deb [arch=amd64] https://download.docker.com/linux/debian bullseye stable
+```
+## Caso for usar o gerenciamento de containers via docker runtime:
+> Se preferir usar o **containerd** como gerenciador de containers continue para [kubernetes instalação](05-install-kubernetes.md).
+
+
 instale o docker
-> Caso tenha problemas ao executar um container instale a versão anteriror [18.06.0]
+> Caso tenha problemas ao executar um container instale a versão anterior [18.06.0]
 ```
 # apt update
 # apt install docker-ce
@@ -65,6 +73,11 @@ systemctl daemon-reload
 systemctl restart docker
 ```
 
+De permissão para usuário comum usar containers
+```
+# usermod -aG docker $USER
+```
+
 Verifique se o docker está funcionando.
 ```
 $ docker version
@@ -90,11 +103,6 @@ Server:
   Built:            Wed Jul 18 19:07:38 2018
   OS/Arch:          linux/amd64
   Experimental:     false
-```
-
-De permissão para usuário comum usar containers
-```
-# usermod -aG docker $USER
 ```
 
 Executando o primeiro docker

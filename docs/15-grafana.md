@@ -15,3 +15,8 @@ https://adm.bagarote.com.br:30002
 
 - Site
 https://grafana.com/
+
+#### Temas usados
+
+9679  - Deployment
+10000 - Server monitor

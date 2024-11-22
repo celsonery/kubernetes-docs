@@ -10,7 +10,7 @@ ou
 ```
 
 > A Saida será algo como:
-```
+```sh
 [init] Using Kubernetes version: v1.21.1
 [preflight] Running pre-flight checks
 [preflight] Pulling images required for setting up a Kubernetes cluster
