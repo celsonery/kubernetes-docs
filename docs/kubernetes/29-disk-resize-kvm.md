@@ -1,33 +1,52 @@
 # Resize KVM Disk
 
-140  qemu-img info /var/lib/libvirt/images/k8sno3.qcow2
-141  qemu-img resize /var/lib/libvirt/images/k8sno3.qcow2 +50G
+```bash
+qemu-img info /var/lib/libvirt/images/k8sno3.qcow2
+qemu-img resize /var/lib/libvirt/images/k8sno3.qcow2 +50G
+```  
   
-  
-144  virsh blockresize k8sno3 /var/lib/libvirt/images/k8sno3.qcow2 80G
-  
-145  ssh k8sno3
+```bash
+virsh blockresize k8sno3 /var/lib/libvirt/images/k8sno3.qcow2 80G
+```
 
-122  df -h
+```bash
+ssh k8sno3
+```
 
-128  fdisk /dev/vda
-129  apt install parted
-130  partprobe /dev/vda
+```bash
+df -h
+```
 
-132  df -h
-133  lsblk
-134  lvs
-135  pvs
-136  vgs
-137  pvresize /dev/vda5
-138  pvresize /dev/vda
-139  pvresize /dev/vda2
+```bash
+fdisk /dev/vda
+apt install parted
+partprobe /dev/vda
+```
 
-140  vgs
-141  pvs
+```bash
+df -h
+lsblk
+lvs
+pvs
+vgs
+pvresize /dev/vda5
+pvresize /dev/vda
+pvresize /dev/vda2
+```
 
-142  lvextend -l +100%FREE /dev/mapper/k8s01--vg-var
+```bash
+vgs
+pvs
+```
 
-143  resize2fs /dev/k8s01-vg/var
+```bash
+lvextend -l +100%FREE /dev/mapper/k8s01--vg-var
+```
 
-144  df -Th
+```bash
+resize2fs /dev/k8s01-vg/var
+```
+
+```bash
+df -Th
+```

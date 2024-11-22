@@ -12,7 +12,8 @@ export default defineUserConfig({
   base: "/",
 
   theme: defaultTheme({
-    docsRepo: 'https://github.com/celsonery/devops/',
+    theme: "readthedocs",
+    docsRepo: 'https://github.com/celsonery/kubernetes-docs',
     docsBranch: 'main',
     docsDir: 'docs',
     editLinkPattern: ':repo/-/edit/:branch/:path',
@@ -25,12 +26,13 @@ export default defineUserConfig({
       },
       {
         text: 'github',
-        link: 'https://github.com/celsonery/my-it-docs'
+        link: 'https://github.com/celsonery/kubernetes-docs'
       },
       ],
     sidebar: [
     {
       text: 'Docker',
+      collapsible: true,
       children: [
           '/docker/01-docker.md',
           '/docker/02-install-docker.md',
@@ -39,6 +41,7 @@ export default defineUserConfig({
     },
     {
       text: 'kubernetes',
+      collapsible: true,
       children: [
         '/kubernetes/01-prepare.md',
         '/kubernetes/02-install-kubernetes.md',

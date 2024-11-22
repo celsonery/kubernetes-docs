@@ -27,7 +27,7 @@ kubectl get nodes -o wide
 > OBS.: A opção **-o wide** acrecenta mais informações a saida
 
 > A Saída deve ser parecida com essa:
-![verificadndo nos do cluester](imgs/checando_nos_do_cluster.PNG)
+![verificadndo nos do cluester](imgs/checando_nos_do_cluster.png)
 
 
 - Verificar Worker 3 fora do Pool - OK
