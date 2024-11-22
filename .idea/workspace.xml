@@ -1,94 +1,64 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="699bd3ea-a261-4336-9027-af503683ba8f" name="Default Changelist" comment="Corrigida comando $(minikube)">
-      <change afterPath="$PROJECT_DIR$/docs/server-registry-local.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/initialize_master.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/initialize_master.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/install-docker.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/install-docker.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/running.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/running.md" afterDir="false" />
-    </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <list default="true" id="08cabd03-f911-4c6e-b6f5-748658f77b3c" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="Git.Settings">
-    <option name="PREVIOUS_COMMIT_AUTHORS">
-      <list>
-        <option value="Celso Nery &lt;celso.nery@gmail.com&gt;" />
-      </list>
-    </option>
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  <component name="ComposerSettings">
+    <execution />
   </component>
-  <component name="ProjectId" id="1QKz1wYjwa2EiWfj9ioNq4j5Rpx" />
-  <component name="ProjectLevelVcsManager">
-    <ConfirmationsSetting value="2" id="Add" />
+  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="/bin/php" />
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 1
+}</component>
+  <component name="ProjectId" id="2jraeUnDMwWwLxI2CfjxuiZe74q" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">
-    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/celso/Devel/projects/oregon/my-docs&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/docs/devops/infra/databases" />
+      <recent name="$PROJECT_DIR$/docs/devops/infra/nginx" />
+      <recent name="$PROJECT_DIR$/docs/devops/infra/apache" />
+      <recent name="$PROJECT_DIR$/docs/devops/monitoring/elasticstack" />
+      <recent name="$PROJECT_DIR$/docs/devops/tests/load" />
+    </key>
   </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
-  </component>
-  <component name="SvnConfiguration">
-    <configuration />
-  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="699bd3ea-a261-4336-9027-af503683ba8f" name="Default Changelist" comment="" />
-      <created>1566904766562</created>
+      <changelist id="08cabd03-f911-4c6e-b6f5-748658f77b3c" name="Changes" comment="" />
+      <created>1722147744838</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1566904766562</updated>
+      <updated>1722147744838</updated>
+      <workItem from="1722147746044" duration="3704000" />
+      <workItem from="1722168978329" duration="11844000" />
+      <workItem from="1722254609909" duration="846000" />
+      <workItem from="1722268166073" duration="24000" />
     </task>
-    <task id="LOCAL-00001" summary="Removida a pasta mkdocs">
-      <created>1566910733512</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1566910733512</updated>
-    </task>
-    <task id="LOCAL-00002" summary="Corrigida comando $(minikube)">
-      <created>1567534500955</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1567534500955</updated>
-    </task>
-    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State>
-              <option name="COLUMN_ORDER" />
-            </State>
-          </value>
-        </entry>
-      </map>
-    </option>
-  </component>
-  <component name="VcsManagerConfiguration">
-    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Removida a pasta mkdocs" />
-    <MESSAGE value="Corrigida comando $(minikube)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Corrigida comando $(minikube)" />
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
   </component>
 </project>
