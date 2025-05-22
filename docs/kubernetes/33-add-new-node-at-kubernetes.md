@@ -31,7 +31,7 @@ kubeadm token create --print-join-command
 
 Va na no e conecte-o
 ```bash
-kubeadm join 192.168.121.100:6443 --token r5jtqh.pek774xjqw4m52di --discovery-token-ca-cert-hash sha256:518233918ee03536725320c4e37c8b94357088233ee1089381822fde4478b895
+kubeadm join 192.168.121.100:6443 --token r5jtqh.pek7... --discovery-token-ca-cert-hash sha256:518233918ee0353672...
 ```
 
 > Após este procedimento verifique se subiu o novo no.

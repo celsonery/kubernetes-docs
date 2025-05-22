@@ -1,0 +1,51 @@
+name: Bug Report
+description: Relate um erro ou comportamento inesperado
+title: "[BUG]: "
+labels: [bug]
+assignees:
+  - seu-usuario
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Obrigado por abrir um bug! Por favor, preencha as informações abaixo.
+
+  - type: input
+    id: ambiente
+    attributes:
+      label: Ambiente
+      description: Qual sistema operacional, navegador, ou versão do app?
+      placeholder: "Ex: Windows 11, Chrome 123, v1.2.3"
+    validations:
+      required: true
+
+  - type: textarea
+    id: descricao
+    attributes:
+      label: Descrição do problema
+      description: Descreva o erro ocorrido.
+      placeholder: "O que aconteceu?"
+    validations:
+      required: true
+
+  - type: textarea
+    id: passos
+    attributes:
+      label: Passos para reproduzir
+      description: Liste as etapas para reproduzir o erro.
+      placeholder: |
+        1. Vá para '...'
+        2. Clique em '...'
+        3. Veja o erro
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: termos
+    attributes:
+      label: Confirmação
+      options:
+        - label: Verifiquei se o problema já foi relatado.
+          required: true
+

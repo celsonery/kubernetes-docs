@@ -1,4 +1,4 @@
-# Instalação docker no Debian 9 / 10
+# Instalação docker no Debian 9 / 10 / 12
 
 Atualize o sistema
 
@@ -15,14 +15,14 @@ Instale pacotes necessários para a instalação.
 
 Adicione repositório do Docker no Debian
 ```bash
-# curl -fsSL https://download.docker.com/linux/debian/gpg -o /etc/apt/keyrings/docker.asc
+# curl -fsSL https://download.docker.com/linux/debian/gpg | gpg --dearmor -o /etc/apt/trusted.gpg.d/docker.gpg
 ```
 
 Crie o arquivo: **/etc/apt/sources.list.d/docker.list**
 
 Debian 12 - Bookwarm
 ```bash
-deb [arch=amd64 signed-by=/etc/apt/keyrings/docker.asc] https://download.docker.com/linux/debian bookworm stable
+deb [arch=amd64 signed-by=/etc/apt/trusted.gpg.d/docker.gpg] https://download.docker.com/linux/debian bookworm stable
 ```
 
 ## Caso for usar o gerenciamento de containers via docker runtime:

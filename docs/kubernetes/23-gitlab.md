@@ -21,6 +21,9 @@ exit
 ```
 
 ### Backup
+```crontab
+00 20 * * * docker exec -t gitlab gitlab-backup create SKIP=registry CRON=1
+```
 
 ### Restore
 - Stop the processes that are connected to the database

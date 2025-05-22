@@ -8,12 +8,12 @@ export default defineUserConfig({
   lang: 'en-US',
 
   title: 'DevOps',
-  description: 'DevOps Documentations',
-  base: "/",
+  description: 'DevOps Documentation',
+  base: "/k8s-documentation/",
 
   theme: defaultTheme({
     theme: "readthedocs",
-    docsRepo: 'https://github.com/celsonery/kubernetes-docs',
+    docsRepo: 'https://github.com/celsonery/devops-docs',
     docsBranch: 'main',
     docsDir: 'docs',
     editLinkPattern: ':repo/-/edit/:branch/:path',
@@ -26,7 +26,7 @@ export default defineUserConfig({
       },
       {
         text: 'github',
-        link: 'https://github.com/celsonery/kubernetes-docs'
+        link: 'https://github.com/celsonery/devops-docs'
       },
       ],
     sidebar: [

@@ -35,7 +35,7 @@ Instale o repositório do **docker** somente para fazer a instalação do **cont
 
 Baixe a chave gpg do repositório
 ```bash
-curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/trusted.gpg.d/docker.gpg
 ```
 
 Crie um arquivo de repositório em **/etc/apt/sources.list.d/** com o nome **docker.list**
@@ -73,14 +73,14 @@ Instale o Kubernetes
 
 Adicione a chave gpg do repositório do kubernetes
 ```bash
-curl -fsSL https://pkgs.k8s.io/core:/stable:/v1.31/deb/Release.key -o /etc/apt/keyrings/kubernetes.asc
+curl -fsSL https://pkgs.k8s.io/core:/stable:/v1.31/deb/Release.key -o /etc/apt/trusted.gpg.d/kubernetes-gpg-keyring.asc
 ```
 
 Adicione o repositório do kubernetes
 
 Crie o arquivo: **/etc/apt/sources.list.d/kubernetes.list**
 ```bash
-deb [signed-by=/etc/apt/keyrings/kubernetes.asc] http://pkgs.k8s.io/core:/stable:/v1.31/deb /"
+deb [signed-by=/etc/apt/trusted.gpg.d/kubernetes-gpg-keyring.gpg] http://pkgs.k8s.io/core:/stable:/v1.31/deb /"
 ```
 
 ###

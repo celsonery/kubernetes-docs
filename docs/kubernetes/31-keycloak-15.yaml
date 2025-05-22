@@ -141,7 +141,7 @@ Ex: auth.bagarote.dev.br:8443
 
 ---
 ls /etc/letsencrypt/live/auth2.bagarote.dev.br
-openssl pkcs12 -export -out keycloak.p12 -inkey /etc/letsencrypt/live/auth.bagarote.dev.br/privkey.pem -in /etc/letsencrypt/live/auth.bagarote.dev.br/fullchain.pem -name kecloak-certificate
+openssl pkcs12 -export -out keycloak.p12 -inkey /etc/letsencrypt/live/auth.bagarote.dev.br/privkey.pem -in /etc/letsencrypt/live/auth.bagarote.dev.br/fullchain.pem -name keycloak-certificate
 keytool -importkeystore -srckeystore keycloak.p12 -destkeystore keycloak.jks -srcstoretype  pkcs12 
 rm keycloak.p12
 keytool -list -v -keystore keycloak.jks
