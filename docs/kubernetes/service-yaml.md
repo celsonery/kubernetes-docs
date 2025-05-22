@@ -1,5 +1,0 @@
-# Services
-
-ClusterIP
-NodePort
-LoadBalancer

@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="generator" content="VuePress 2.0.0-rc.14" />
+    <style>
+      :root {
+        --c-bg: #fff;
+      }
+
+      html.dark {
+        --c-bg: #22272e;
+      }
+
+      html,
+      body {
+        background-color: var(--c-bg);
+      }
+    </style>
+    <script>
+      const userMode = localStorage.getItem('vuepress-color-scheme')
+      const systemDarkMode =
+        window.matchMedia &&
+        window.matchMedia('(prefers-color-scheme: dark)').matches
+
+      if (userMode === 'light') {
+        document.documentElement.dataset.theme = 'light'
+      } else if (userMode === 'dark' || systemDarkMode) {
+        document.documentElement.classList.toggle('dark', true)
+        document.documentElement.dataset.theme = 'dark'
+      }
+    </script>
+    <link rel="icon" href="/images/hero.png"><title>DevOps</title><meta name="description" content="DevOps Documentation">
+    <link rel="preload" href="/k8s-documentation/assets/style-DQgJpjMi.css" as="style"><link rel="stylesheet" href="/k8s-documentation/assets/style-DQgJpjMi.css">
+    <link rel="modulepreload" href="/k8s-documentation/assets/app-CTpZyuN8.js"><link rel="modulepreload" href="/k8s-documentation/assets/404.html-BopWKvhm.js">
+    <link rel="prefetch" href="/k8s-documentation/assets/index.html-Dr4blKJU.js" as="script"><link rel="prefetch" href="/k8s-documentation/assets/01-docker.html-067uKNjy.js" as="script"><link rel="prefetch" href="/k8s-documentation/assets/02-install-docker.html-Sdi2PYN6.js" as="script"><link rel="prefetch" href="/k8s-documentation/assets/03-volumes-docker.html-BrUFY80k.js" as="script"><link rel="prefetch" href="/k8s-documentation/assets/01-prepare.html-CR0dzayt.js" as="script"><link rel="prefetch" href="/k8s-documentation/assets/02-install-kubernetes.html-CeFtwvsv.js" as="script"><link rel="prefetch" href="/k8s-documentation/assets/03-initialize-master.html-DS0DWc5v.js" as="script"><link rel="prefetch" href="/k8s-documentation/assets/04-initialize-slave.html-DLHHwVnR.js" as="script"><link rel="prefetch" href="/k8s-documentation/assets/05-running-yamls.html-DXPZtdja.js" as="script"><link rel="prefetch" href="/k8s-documentation/assets/05-running.html-wRGQCl27.js" as="script"><link rel="prefetch" href="/k8s-documentation/assets/11-server-registry-local.html-C1ns2IIc.js" as="script"><link rel="prefetch" href="/k8s-documentation/assets/12-helm.html-Ck2QWAQH.js" as="script"><link rel="prefetch" href="/k8s-documentation/assets/13-metric-server.html-BG65fOXT.js" as="script"><link rel="prefetch" href="/k8s-documentation/assets/14-prometheus.html-C4M15ZI3.js" as="script"><link rel="prefetch" href="/k8s-documentation/assets/15-grafana.html-DBy3c1Ny.js" as="script"><link rel="prefetch" href="/k8s-documentation/assets/16-ingress-controller.html-DDBDUOTK.js" as="script"><link rel="prefetch" href="/k8s-documentation/assets/17-cert-manager.html-Db8UKbri.js" as="script"><link rel="prefetch" href="/k8s-documentation/assets/19-volumes-k8s.html-CkLBwlHA.js" as="script"><link rel="prefetch" href="/k8s-documentation/assets/20-k3s.html-BRJ2oGte.js" as="script"><link rel="prefetch" href="/k8s-documentation/assets/23-gitlab.html-D3x-0wAd.js" as="script"><link rel="prefetch" href="/k8s-documentation/assets/24-portainer.html-D0xNW4zT.js" as="script"><link rel="prefetch" href="/k8s-documentation/assets/24-sonarqube.html-BtJrv6uA.js" as="script"><link rel="prefetch" href="/k8s-documentation/assets/25-renovar-certs.html-CG8lRKwe.js" as="script"><link rel="prefetch" href="/k8s-documentation/assets/26-redis-cluster.html-CG0_hU06.js" as="script"><link rel="prefetch" href="/k8s-documentation/assets/27-postgres.html-DYxDhe3V.js" as="script"><link rel="prefetch" href="/k8s-documentation/assets/28-zabbix-postgres.html-BL01JBlw.js" as="script"><link rel="prefetch" href="/k8s-documentation/assets/29-disk-resize-kvm.html-CgjOhqTN.js" as="script"><link rel="prefetch" href="/k8s-documentation/assets/30-letencrypt.html-Ce25dzdD.js" as="script"><link rel="prefetch" href="/k8s-documentation/assets/33-add-new-node-at-kubernetes.html-DTG4M-Jj.js" as="script"><link rel="prefetch" href="/k8s-documentation/assets/34-regcred.html-DEmYq1F8.js" as="script"><link rel="prefetch" href="/k8s-documentation/assets/35-vsftp.html-D7Jmrh7L.js" as="script"><link rel="prefetch" href="/k8s-documentation/assets/LICENSE.html-D5FUhBZf.js" as="script"><link rel="prefetch" href="/k8s-documentation/assets/commands.html-DgWGhMes.js" as="script"><link rel="prefetch" href="/k8s-documentation/assets/service-yaml.html-BH2zjC3O.js" as="script"><link rel="prefetch" href="/k8s-documentation/assets/using.html-YHakuNd1.js" as="script"><link rel="prefetch" href="/k8s-documentation/assets/install-minikube.html-CMIMfL0M.js" as="script"><link rel="prefetch" href="/k8s-documentation/assets/install-openshift.html-D_vszjfP.js" as="script">
+  </head>
+  <body>
+    <div id="app"><!--[--><div class="vp-theme-container" data-v-303656ba><main class="page" data-v-303656ba><div class="theme-default-content" data-v-303656ba><h1 data-v-303656ba>404</h1><blockquote data-v-303656ba>There&#39;s nothing here.</blockquote><a class="route-link" href="/k8s-documentation/" data-v-303656ba>Take me home</a></div></main></div><!--[--><!----><!--]--><!--]--></div>
+    <script type="module" src="/k8s-documentation/assets/app-CTpZyuN8.js" defer></script>
+  </body>
+</html>
