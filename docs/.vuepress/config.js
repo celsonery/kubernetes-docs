@@ -9,7 +9,7 @@ export default defineUserConfig({
 
   title: 'DevOps',
   description: 'DevOps Documentation',
-  base: "/k8s-documentation/",
+  base: "/kubernetes-docs/",
 
   theme: defaultTheme({
     theme: "readthedocs",
