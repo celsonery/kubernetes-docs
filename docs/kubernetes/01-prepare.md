@@ -1,15 +1,15 @@
-# Preparação do ambiente
+# To prepare envirenment
 
-### Requisitos
+### Requirements
 
-1. Mínimo de 3 servers
-1. Servidor master (control-plane) com 2 CPU's (cores) 2 GB de RAM
-1. Servidor slaves (workers) com 1 CPU e 1 GB de RAM
-1. Acesso administrativo (root)
+1. 3 servers
+1. Server master (control-plane) with 2 CPU's (cores) 2 GB de RAM
+1. Server slaves (workers) with 1 CPU e 1 GB de RAM
+1. Root access
 
 
-### Preparação
-Adicione nomes e IPs das maquinas no arquivo **/etc/hosts**
+### Preparation
+Add names and IPs in the file **/etc/hosts**
 
 ```
 10.0.10.100  master.empresa.local    master
@@ -17,11 +17,11 @@ Adicione nomes e IPs das maquinas no arquivo **/etc/hosts**
 10.0.10.102  slav02.empresa.local    slav02
 ```
 
-Configure o firewall
+Configure the firewall
 
 Master:
 
-| Porta | Protocolo |
+| Port | Protocol |
 | ---- | ---- |
 | 6443 | TCP |
 | 2379-2380 | TCP |
@@ -32,31 +32,29 @@ Master:
 
 Slaves:
 
-| Porta | Protocolo |
+| Port | Protocol |
 | ---- | ---- |
 | 10251 | TCP |
 | 10255 | TCP |
 
-Desabilite o SWAP
+Disable SWAP
 ```
 # swapon -s
 # swapoff -a
 ```
 
-Edite o arquivo **/etc/fstab** e comente a linha correspondente ao arquivo de troca (swap)
+Edit file **/etc/fstab** add coment at swap line
 ```
 #/dev/mapper/master--vg-swap_1 none swap    sw  0   0
 ```
 
-Após toda configuração verifique se as maquinas estão se enxergando com o **ping**
+Afer that check machines communication with **ping**
 ```
 # ping slav01
 # ping slav02
 ```
 
-Se tudo correu bem e obteve resposta dos nós escravos e vice-versa reinicie os computadores.
+If all right you send and receive pings
 ```
 # shutdown -r now
 ```
-
-

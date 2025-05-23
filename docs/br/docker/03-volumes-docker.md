@@ -1,21 +1,21 @@
-# Volumes in Docker
+# Volumes no Docker
 
-Create docker volume.
+Criar o volume
 ```
 docker volume create nome_do_vol
 ```
 
-Check docker volumes.
+Listar os volumes
 ```
 docker volume ls
 ```
 
-Inspect docker volume - see more details.
+Inspecionar o volume - visualizar mais detalhes
 ```
 docker ispect nome_do_vol
 ```
 
-remove docker volume.
+remover o volume
 ```
 docker volume rm nome_do_vol
 ```

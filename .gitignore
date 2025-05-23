@@ -1,3 +1,11 @@
+# Folders
 node_modules/
 docs/.vuepress/dist/
 docs/.vuepress/.temp/
+
+# Files
+package-lock.json
+
+# IDE Files
+.idea
+.vscode

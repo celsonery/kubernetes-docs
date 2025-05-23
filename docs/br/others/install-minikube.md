@@ -1,30 +1,30 @@
 # Minikube
 
-> Minikube is develop to test, It's use only node to run kubernetes.
+> Minikube é um projeto para teste, ele utiliza um único nó para executar o kubernetes, assim facilita o aprendizado.
 
-Working version:
+Versão funcionando:
 ```
 Docker: 19.03.2
 Minikube: v1.3.1
 Kubetcl: v1.15.2
 ```
 
-#### Install ( docker is need. )
+#### Instalação ( Necessário docker instalado. )
 
-Download minikube:
+Download do minikube:
 ```
 https://github.com/kubernetes/minikube/releases/
 ```
-Install:
+Instalação:
 
-- Install kubectl:
+- Instalar o kubectl:
 ```
 curl -LO https://storage.googleapis.com/kubernetes-release/release/v1.17.0/bin/linux/amd64/kubectl
 mv kubectl /usr/local/bin/
 chmod +x /usr/local/bin/kubectl
 ```
 
-- So install the minikube
+- Então instalar o minikube
 
 ```
 curl -Lo minikube https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64 
@@ -34,24 +34,24 @@ chmod +x /usr/local/bin/minikube
 
 /etc/docker/daemon.json: nao utilizado
 
-Running minikube:
+Executando o minikube:
 ```
 minikube start
 ```
 
-Running dashboard
+Executando o dashboard
 ```
 minikube dashboard
 ```
 
-Connecting remote dashboard
+Acessando o dashboard externamente
 ```
 kubectl proxy --address='0.0.0.0' --disable-filter=true
 ```
 
-Connecting by remote browser
+Acessando via browser externo
 ```
 http://your_api_server_ip:8001/api/v1/namespaces/kube-system/services/http:kubernetes-dashboard:/proxy/
 ```
 
-![Minikube painel](imgs/minikube_painel.png)
+![open shift painel](imgs/minikube_painel.png)

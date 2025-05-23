@@ -1,4 +1,4 @@
-# Documentação sobre docker.
+# About docker.
 
-Consiga todas as informações necessárias em [Docker para desenvolvedores](https://github.com/celsonery/docker-para-desenvolvedores)
-ou na própria documentação oficial [Docker.com](https://www.docker.com/)
+Get all need information in [Docker for developers](https://github.com/celsonery/docker-para-desenvolvedores)
+or in the oficial documentation [Docker.com](https://www.docker.com/)

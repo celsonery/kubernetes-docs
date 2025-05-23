@@ -1,111 +1,111 @@
-# Instalação no Debian
+# Kubernetes install
 
-Carregue os modulos **overlay** e **br_netfilter**
+Load **overlay** and **br_netfilter** modules
 
-Crie o arquivo **/etc/modules-load.d/containerd.conf** para subir após o reboot
+Create file **/etc/modules-load.d/containerd.conf**
 
 ```bash
 overlay
 br_netfilter
 ```
 
-Carregue manualmente
+Manual load
 
 ```bash
 $ sudo modprobe overlay
 $ sudo modprobe br_netfilter
 ```
 
-Crie o arquivo /etc/sysctl.d/99-kubernetes-k8s.conf
+Create file /etc/sysctl.d/99-kubernetes-k8s.conf
 
 ```bash
 net.bridge.bridge-nf-call-iptables = 1
 net.ipv4.ip_forward = 1
 net.bridge.bridge-nf-call-ip6tables = 1
 ```
-Carregue as configurações criadas
+Load configs created
 
 ```bash
 $ sudo sysctl --system
 ```
 
-Instale o containerd
+Install containerd
 
-Instale o repositório do **docker** somente para fazer a instalação do **containerd.io**
+Install **docker** repository only to install **containerd.io**
 
-Baixe a chave gpg do repositório
+Download gpg key by repository
 ```bash
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/trusted.gpg.d/docker.gpg
 ```
 
-Crie um arquivo de repositório em **/etc/apt/sources.list.d/** com o nome **docker.list**
+Create repository file in **/etc/apt/sources.list.d/** with name **docker.list**
 
 ```bash
 deb [arch=amd64] https://download.docker.com/linux/debian bullseye stable
 ```
 
-Atualize a lista de pacotes e instale o **containerd.io**
+Update package list and install **containerd.io**
 
 ```bash
 sudo apt-get update
 sudo apt-get install containerd.io
 ```
 
-Sobreescreva o arquivo de configuração do containerd
+Overwrite containerd config file
 
 ```bash
 $ sudo containerd config default > /etc/containerd/config.toml
 ```
 
-Edite o arquivo **/etc/containerd/config.toml** e altere a opção **SystemdCgroup** de **false** para **true**
+Edit file **/etc/containerd/config.toml** and change the option **SystemdCgroup** from **false** to **true**
 
 ```bash
 sudo vim /etc/containerd/config.toml
 ```
 
-Restarte o containerd
+Restart the containerd
 
 ```bash
 sudo systemctl restart containerd
 ```
 
-Instale o Kubernetes
+Install the Kubernetes
 
-Adicione a chave gpg do repositório do kubernetes
+Add repository kubernetes gpg key
 ```bash
-curl -fsSL https://pkgs.k8s.io/core:/stable:/v1.31/deb/Release.key -o /etc/apt/trusted.gpg.d/kubernetes-gpg-keyring.asc
+curl -fsSL https://pkgs.k8s.io/core:/stable:/v1.31/deb/Release.key | gpg --dearmor -o /etc/apt/trusted.gpg.d/kubernetes-gpg-keyring.gpg
 ```
 
-Adicione o repositório do kubernetes
+Add kubernetes repository
 
-Crie o arquivo: **/etc/apt/sources.list.d/kubernetes.list**
+Create file: **/etc/apt/sources.list.d/kubernetes.list**
 ```bash
 deb [signed-by=/etc/apt/trusted.gpg.d/kubernetes-gpg-keyring.gpg] http://pkgs.k8s.io/core:/stable:/v1.31/deb /"
 ```
 
 ###
 
-Atualize a lista de pacotes
+Update package list
 ```bash
 sudo apt update
 ```
 
-Instale o kubernetes
+Install kubernetes
 ```bash
 sudo apt install kubelet kubeadm
 ```
 
-Marque os pacotes para prevenir modificações.
+Mark hold packages
 ```bash
 sudo apt-mark hold kubelet kubeadm
 ```
 
-Ative o daemon para iniciar automaticamente
+Active the daemon to autostart
 ```bash
 sudo systemctl enable kubelet
 ```
 
-Limitar armazenamento de imagens
+Limit image storage
 ```bash
 vim /var/lib/kubelet/kubeadm-flags.env
 

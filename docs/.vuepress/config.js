@@ -11,6 +11,19 @@ export default defineUserConfig({
   description: 'DevOps Documentation',
   base: "/kubernetes-docs/",
 
+  locales: {
+    '/': {
+      lang: 'en-US',
+      title: 'English',
+      description: 'English Documentation',
+    },
+    '/br/': {
+      lang: 'Português',
+      title: 'Português',
+      description: 'Português Brasil Documentação',
+    },
+  },
+
   theme: defaultTheme({
     theme: "readthedocs",
     docsRepo: 'https://github.com/celsonery/devops-docs',
@@ -75,6 +88,14 @@ export default defineUserConfig({
         '/kubernetes/using.md',
         ],
     },
+    {
+      text: 'Others',
+      collapsible: true,
+      children: [
+        '/others/install-minikube.md',
+        '/others/install-openshift.md'
+      ],
+    }
     ],
   }),
 })
