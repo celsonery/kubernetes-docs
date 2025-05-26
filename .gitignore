@@ -7,5 +7,5 @@ docs/.vuepress/.temp/
 package-lock.json
 
 # IDE Files
-.idea
-.vscode
+.idea/
+.vscode/
