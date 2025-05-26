@@ -1,4 +1,4 @@
-# Instalação docker no Debian 9 / 10 / 12
+# Instalação docker no Debian 9 / 10
 
 Atualize o sistema
 
