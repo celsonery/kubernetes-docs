@@ -1,22 +1,18 @@
 name: Bug report
 description: Create a report to help us improve
-labels: bug
-assignees: 'your-user'
+labels: 'bug'
+assignees: 'your-username'
 
 body:
   - type: markdown
     attributes:
-      value: |
-        A clear and concise description of what the bug is.
+      value: Thank you for your report!
 
   - type: input
     id: title
     attributes:
       label: Describe the bug
-      value: |
-        A clear and concise description of what the bug is.
-    validations:
-      required: true
+      placeholder: A clear and concise description of what the bug is.
 
   - type: textarea
     id: reproduce
