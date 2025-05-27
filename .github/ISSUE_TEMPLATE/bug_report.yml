@@ -42,6 +42,7 @@ body:
     id: screenshots
     attributes:
       label: Screenshots
+      placeholder: Press the button below to add screenshots.
       description: If applicable, add screenshots to help explain your problem.
 
   - type: textarea
