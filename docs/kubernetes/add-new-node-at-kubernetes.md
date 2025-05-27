@@ -1,4 +1,4 @@
-# Novo no Cluster
+# Add node novo no Cluster
 
 ## Use template
 Use o k8sno-template e clone para uma nova maquina

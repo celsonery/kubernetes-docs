@@ -47,32 +47,31 @@ export default defineUserConfig({
       text: 'Docker',
       collapsible: true,
       children: [
-          '/docker/docker.md',
-          '/docker/install-docker.md',
-          '/docker/volumes-docker.md'
+          '/docker/docker',
+          '/docker/install-docker',
+          '/docker/volumes-docker'
         ],
     },
     {
       text: 'kubernetes',
       collapsible: true,
       children: [
-        '/kubernetes/prepare.md',
-        '/kubernetes/install-kubernetes.md',
-        '/kubernetes/initialize-master.md',
-        '/kubernetes/initialize-slave.md',
-        '/kubernetes/running-yamls.md',
-        '/kubernetes/running.md',
-        '/kubernetes/server-registry-local.md',
-        '/kubernetes/helm.md',
-        '/kubernetes/metric-server.md',
-        '/kubernetes/volumes-k8s.md',
-        '/kubernetes/renovar-certs.md',
-        '/kubernetes/redis-cluster.md',
+        '/kubernetes/prepare',
+        '/kubernetes/install-kubernetes',
+        '/kubernetes/initialize-master',
+        '/kubernetes/initialize-slave',
+        '/kubernetes/running-yamls',
+        '/kubernetes/running',
+        '/kubernetes/server-registry-local',
+        '/kubernetes/helm',
+        '/kubernetes/metric-server',
+        '/kubernetes/volumes-k8s',
+        '/kubernetes/renovar-certs',
         '/kubernetes/add-new-node-at-kubernetes',
-        '/kubernetes/regcred.md',
-        '/kubernetes/commands.md',
-        '/kubernetes/service-yaml.md',
-        '/kubernetes/using.md',
+        '/kubernetes/regcred',
+        '/kubernetes/commands',
+        '/kubernetes/service-yaml',
+        '/kubernetes/using',
         ],
     },
     {
@@ -81,7 +80,7 @@ export default defineUserConfig({
       children: [
         '/kubernetes-addons/cert-manager',
         '/kubernetes-addons/ingress-controller',
-        '/kubernetes-addons/prometheus.md',
+        '/kubernetes-addons/prometheus',
         '/kubernetes-addons/grafana',
         '/kubernetes-addons/portainer',
         '/kubernetes-addons/redis-cluster',
@@ -121,7 +120,7 @@ export default defineUserConfig({
       text: 'letsencrypt',
       collapsible: true,
       children: [
-        '/letencrypt/letencrypt.md',
+        '/letsencrypt/letsencrypt',
       ],
     },
     {
@@ -136,8 +135,8 @@ export default defineUserConfig({
       collapsible: true,
       children: [
         '/others/k3s',
-        '/others/install-minikube.md',
-        '/others/install-openshift.md'
+        '/others/install-minikube',
+        '/others/install-openshift'
       ],
     }
     ],
