@@ -1,4 +1,0 @@
-# Sonarqube - CE
-
-### Instalação
-

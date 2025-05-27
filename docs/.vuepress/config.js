@@ -47,51 +47,95 @@ export default defineUserConfig({
       text: 'Docker',
       collapsible: true,
       children: [
-          '/docker/01-docker.md',
-          '/docker/02-install-docker.md',
-          '/docker/03-volumes-docker.md'
+          '/docker/docker.md',
+          '/docker/install-docker.md',
+          '/docker/volumes-docker.md'
         ],
     },
     {
       text: 'kubernetes',
       collapsible: true,
       children: [
-        '/kubernetes/01-prepare.md',
-        '/kubernetes/02-install-kubernetes.md',
-        '/kubernetes/03-initialize-master.md',
-        '/kubernetes/04-initialize-slave.md',
-        '/kubernetes/05-running-yamls.md',
-        '/kubernetes/05-running.md',
-        '/kubernetes/11-server-registry-local.md',
-        '/kubernetes/12-helm.md',
-        '/kubernetes/13-metric-server.md',
-        '/kubernetes/14-prometheus.md',
-        '/kubernetes/15-grafana.md',
-        '/kubernetes/16-ingress-controller.md',
-        '/kubernetes/17-cert-manager.md',
-        '/kubernetes/19-volumes-k8s.md',
-        '/kubernetes/20-k3s.md',
-        '/kubernetes/23-gitlab.md',
-        '/kubernetes/24-portainer.md',
-        '/kubernetes/24-sonarqube.md',
-        '/kubernetes/25-renovar-certs.md',
-        '/kubernetes/26-redis-cluster.md',
-        '/kubernetes/27-postgres.md',
-        '/kubernetes/28-zabbix-postgres.md',
-        '/kubernetes/29-disk-resize-kvm.md',
-        '/kubernetes/30-letencrypt.md',
-        '/kubernetes/33-add-new-node-at-kubernetes',
-        '/kubernetes/34-regcred.md',
-        '/kubernetes/35-vsftp.md',
+        '/kubernetes/prepare.md',
+        '/kubernetes/install-kubernetes.md',
+        '/kubernetes/initialize-master.md',
+        '/kubernetes/initialize-slave.md',
+        '/kubernetes/running-yamls.md',
+        '/kubernetes/running.md',
+        '/kubernetes/server-registry-local.md',
+        '/kubernetes/helm.md',
+        '/kubernetes/metric-server.md',
+        '/kubernetes/volumes-k8s.md',
+        '/kubernetes/renovar-certs.md',
+        '/kubernetes/redis-cluster.md',
+        '/kubernetes/add-new-node-at-kubernetes',
+        '/kubernetes/regcred.md',
         '/kubernetes/commands.md',
         '/kubernetes/service-yaml.md',
         '/kubernetes/using.md',
         ],
     },
     {
+      text: 'kubernetes-addons',
+      collapsible: true,
+      children: [
+        '/kubernetes-addons/cert-manager',
+        '/kubernetes-addons/ingress-controller',
+        '/kubernetes-addons/prometheus.md',
+        '/kubernetes-addons/grafana',
+        '/kubernetes-addons/portainer',
+        '/kubernetes-addons/redis-cluster',
+      ],
+    },
+    {
+      text: 'kvm',
+      collapsible: true,
+      children: [
+        '/kvm/disk-resize-kvm'
+      ],
+    },
+    {
+      text: 'gitlab',
+      collapsible: true,
+      children: [
+        '/gitlab/gitlab'
+      ],
+    },
+    {
+      text: 'keycloak',
+      collapsible: true,
+      children: [
+        '/keycloak/keycloak-15',
+        '/keycloak/keycloak-26',
+      ],
+    },
+    {
+      text: 'postgres',
+      collapsible: true,
+      children: [
+        '/postgres/postgres',
+        '/postgres/zabbix-postgres',
+      ],
+    },
+    {
+      text: 'letsencrypt',
+      collapsible: true,
+      children: [
+        '/letencrypt/letencrypt.md',
+      ],
+    },
+    {
+      text: 'vsftp',
+      collapsible: true,
+      children: [
+        '/vsftp/vsftp',
+      ],
+    },
+    {
       text: 'Others',
       collapsible: true,
       children: [
+        '/others/k3s',
         '/others/install-minikube.md',
         '/others/install-openshift.md'
       ],
