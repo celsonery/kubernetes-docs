@@ -10,51 +10,26 @@ body:
       value: |
         Thanks for taking the time to fill out this feature request!
 
+  - type: textarea
+    attributes:
+      label: Is your feature request related to a problem? Please describe.
+      description: A clear and concise description of what the problem is. Ex. I'm always frustrated when [...]
+    validations:
+      required: true
 
-#name: Solicitação de Funcionalidade
-#description: Sugira uma nova funcionalidade ou melhoria
-#title: "[FEATURE]: "
-#labels: [enhancement]
-#assignees: []
+  - type: textarea
+    attributes:
+      label: Describe the solution you'd like
+      description: A clear and concise description of what you want to happen.
+    validations:
+      required: true
 
-#body:
-#  - type: markdown
-#    attributes:
-#      value: |
-#        Obrigado por sugerir uma nova funcionalidade! Preencha o formulário abaixo para descrever sua ideia.
-#
-#  - type: input
-#    id: contexto
-#    attributes:
-#      label: Contexto ou Problema
-#      description: Qual problema você está tentando resolver?
-#      placeholder: "Ex: É difícil encontrar itens na lista porque não há filtro."
-#    validations:
-#      required: true
-#
-#  - type: textarea
-#    id: proposta
-#    attributes:
-#      label: Sua Proposta
-#      description: Descreva a funcionalidade que gostaria de ver implementada.
-#      placeholder: "Ex: Adicionar um campo de busca no topo da lista de itens."
-#    validations:
-#      required: true
-#
-#  - type: textarea
-#    id: beneficios
-#    attributes:
-#      label: Benefícios
-#      description: Como essa funcionalidade melhoraria o projeto?
-#      placeholder: "Ex: Vai melhorar a usabilidade e reduzir o tempo de busca."
-#    validations:
-#      required: false
-#
-#  - type: checkboxes
-#    id: termos
-#    attributes:
-#      label: Confirmação
-#      options:
-#        - label: Verifiquei se esta funcionalidade já foi solicitada anteriormente.
-#          required: true
-#
+  - type: textarea
+    attributes:
+      label: Describe alternatives you've considered
+      description: A clear and concise description of any alternative solutions or features you've considered.
+
+  - type: textarea
+    attributes:
+      label: Additional context
+      description: Add any other context or screenshots about the feature request here.
